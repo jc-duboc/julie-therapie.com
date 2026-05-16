@@ -1,0 +1,113 @@
+---
+title: "Consultations & tarifs"
+subtitle: "Les différents formats de séance que je propose"
+---
+
+::: {.section-intro}
+
+Toutes les séances ont lieu en **téléconsultation** (visio sécurisée), à l'exception de la
+**première séance**, qui peut se faire **en présentiel à St Vigor**.
+
+:::
+
+## Les différents formats
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### {{< fa comments >}} Psychothérapie classique
+
+Un travail verbal, structuré, dans la tradition de la psychothérapie analytique et intégrative.
+Indiqué pour la majorité des demandes : troubles de l'humeur, anxiété, questionnements personnels,
+estime de soi.
+
+- **Durée :** 45 minutes
+- **Tarif :** 50 €
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### {{< fa person-arrows >}} Thérapie psychocorporelle
+
+Un travail qui inclut le corps -- respiration, ressenti, mouvement -- particulièrement adapté
+lorsque la parole seule peine à atteindre ce qui est figé : traumas, blocages somatiques,
+hypervigilance.
+
+- **Durée :** 45 minutes
+- **Tarif :** 50 €
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### {{< fa layer-group >}} Séance mixte (verbale + psychocorporelle)
+
+L'articulation des deux approches dans une même séance, pour un travail en profondeur.
+
+- **Durée :** 1h30
+- **Tarif :** 90 €
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### {{< fa heart >}} Thérapie de couple
+
+Travail conjoint avec les deux partenaires, sur la communication, les conflits, les blessures
+relationnelles, les transitions.
+
+- **Durée :** 1h30
+- **Tarif :** 90 €
+:::
+
+:::
+
+## Récapitulatif des tarifs
+
+```{=html}
+<table class="tariff-table">
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>Durée</th>
+      <th>Tarif</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Psychothérapie classique (verbale)</td>
+      <td>45 min</td>
+      <td class="tariff-price">50 €</td>
+    </tr>
+    <tr>
+      <td>Thérapie psychocorporelle</td>
+      <td>45 min</td>
+      <td class="tariff-price">50 €</td>
+    </tr>
+    <tr>
+      <td>Séance mixte (verbale + corporelle)</td>
+      <td>1h30</td>
+      <td class="tariff-price">90 €</td>
+    </tr>
+    <tr>
+      <td>Thérapie de couple</td>
+      <td>1h30</td>
+      <td class="tariff-price">90 €</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+## Modalités de paiement
+
+::: {.callout-important appearance="simple"}
+**Paiement par anticipation, par virement bancaire.**
+
+Le créneau est réservé une fois le paiement reçu. Si une séance n'est pas réglée **72 heures avant
+l'horaire prévu**, elle est libérée et proposée à un autre patient.
+:::
+
+Cette règle s'applique à toutes les séances et vise à garantir l'accès aux créneaux pour les
+personnes qui s'engagent dans le travail thérapeutique.
+
+---
+
+## Prochaine étape
+
+[Prendre rendez-vous](../prise-de-rdv/index.qmd){.btn .btn-primary}
+[Voir les problèmes traités](../problemes-traites/index.qmd){.btn .btn-outline-primary}

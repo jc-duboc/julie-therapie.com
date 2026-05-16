@@ -1,0 +1,94 @@
+---
+title: "Prendre rendez-vous"
+subtitle: "Comment me joindre et réserver une séance"
+---
+
+::: {.section-intro}
+
+Vous pouvez me contacter par le canal qui vous convient le mieux. Je réponds en général sous
+**48 heures ouvrées**.
+
+:::
+
+## Me contacter
+
+```{=html}
+<div class="contact-grid">
+  <a class="contact-card" href="tel:+33277161118">
+    <span class="contact-icon">📞</span>
+    <span>
+      <span class="contact-label">Téléphone</span><br>
+      <span class="contact-value">02 77 16 11 18</span>
+    </span>
+  </a>
+  <a class="contact-card" href="sms:+33277161118">
+    <span class="contact-icon">💬</span>
+    <span>
+      <span class="contact-label">SMS</span><br>
+      <span class="contact-value">02 77 16 11 18</span>
+    </span>
+  </a>
+  <a class="contact-card" href="mailto:contact@julie-therapie.com">
+    <span class="contact-icon">✉️</span>
+    <span>
+      <span class="contact-label">Email</span><br>
+      <span class="contact-value">contact@julie-therapie.com</span>
+    </span>
+  </a>
+  <a class="contact-card" href="https://wa.me/33277161118">
+    <span class="contact-icon">🟢</span>
+    <span>
+      <span class="contact-label">WhatsApp</span><br>
+      <span class="contact-value">Envoyer un message</span>
+    </span>
+  </a>
+  <a class="contact-card" href="https://m.me/" rel="me">
+    <span class="contact-icon">💠</span>
+    <span>
+      <span class="contact-label">Messenger</span><br>
+      <span class="contact-value">m.me / Facebook</span>
+    </span>
+  </a>
+</div>
+```
+
+::: {.callout-warning appearance="simple"}
+Les numéros, adresses email et liens ci-dessus sont **provisoires** : le cabinet est en cours
+d'installation. Ils seront mis à jour à l'ouverture officielle.
+:::
+
+## Conditions de réservation
+
+::: {.callout-important}
+## Le créneau est confirmé une fois le paiement effectué
+
+La **prise de rendez-vous devient ferme uniquement après réception du paiement**.
+:::
+
+- **Paiement par anticipation, par virement bancaire.**
+- Les coordonnées bancaires vous sont communiquées au moment de la confirmation du créneau.
+- Si la séance **n'est pas payée 72 heures avant l'horaire prévu**, le créneau est libéré et
+  proposé à un autre patient.
+- Possibilité d'une **première séance en présentiel** à St Vigor (toutes les suivantes en visio).
+
+## Avant la première séance
+
+Quelques éléments à préparer pour gagner du temps :
+
+- Quelques mots sur votre **motif de consultation** -- même de façon très simple.
+- Pour les séances en visio : un **endroit calme**, un casque/écouteurs si possible, une bonne
+  connexion. Le lien de visio est envoyé peu avant la séance.
+
+## En cas d'urgence
+
+Je ne suis **pas un service d'urgence**. En cas de crise (idées suicidaires, danger immédiat,
+détresse aiguë), contactez :
+
+- **15** -- SAMU
+- **3114** -- Numéro national de prévention du suicide (24h/24, gratuit)
+- **112** -- Numéro d'urgence européen
+- Le service des urgences de votre hôpital le plus proche
+
+---
+
+[← Retour à l'accueil](../../index.qmd){.btn .btn-outline-primary}

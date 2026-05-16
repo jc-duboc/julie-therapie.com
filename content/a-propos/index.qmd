@@ -1,0 +1,75 @@
+---
+title: "À propos"
+subtitle: "Julie-Christine Duboc -- parcours et publications"
+---
+
+::: {.section-intro}
+
+Psychologue clinicienne, je travaille depuis plusieurs années à articuler la **clinique du
+traumatisme**, l'approche **psychocorporelle** et un usage rigoureux de la psychologie classique.
+Mon objectif : proposer un accompagnement qui ne se limite pas à apaiser un symptôme, mais qui
+remonte jusqu'à sa cause -- pour que les changements soient durables.
+
+:::
+
+## {{< fa graduation-cap >}} Formation
+
+- **2020 -- Diplôme universitaire de Victimologie**
+  Université Paris 5 -- Paris Descartes
+- **2016 -- Master de psychologie clinique et psychopathologie**
+  Université Paris 8 -- Vincennes Saint-Denis
+
+**Numéro RPPS :** 10009226225
+**Numéro ADELI :** _à compléter_
+
+## {{< fa briefcase >}} Spécialités
+
+- Psychothérapie clinique (cadre intégratif)
+- Thérapie psychocorporelle
+- Psychotraumatologie -- traumas simples et complexes
+- Victimologie
+- Sophrologie
+
+## {{< fa globe >}} Langues parlées
+
+- Français (langue maternelle)
+- English -- consultations possibles en anglais
+- Español -- consultas también disponibles en español
+
+## {{< fa book >}} Publications & travaux
+
+::: {.callout-note appearance="simple"}
+Section en cours de constitution. Les publications, communications et formations animées seront
+listées ici.
+:::
+
+<!-- TODO: ajouter publications, communications, formations dispensées -->
+
+## {{< fa location-dot >}} Cabinet
+
+**St Vigor (Seine-Maritime), près du Havre**
+_Adresse précise communiquée à la prise de rendez-vous._
+
+La plupart des séances ont lieu en **téléconsultation**. Le présentiel est possible pour la
+première séance.
+
+## {{< fa share-nodes >}} Me suivre
+
+- [LinkedIn](https://www.linkedin.com/in/julie-christine-duboc-9b894a328/)
+- Facebook : _à venir_
+- Instagram : _à venir_
+- YouTube : _à venir_
+
+---
+
+## Mentions légales
+
+**Éditrice du site :** Julie-Christine Duboc, psychologue, EI (RPPS 10009226225).
+**Hébergement :** GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr Street, San Francisco, CA 94107,
+USA).
+**Données personnelles :** ce site ne dépose ni cookie analytique ni traceur publicitaire. Les
+informations transmises via les canaux de contact sont traitées dans le cadre strict du secret
+professionnel.
+
+**Crédits :** Site bâti avec [Quarto](https://quarto.org). Code source disponible sur
+[GitHub](https://github.com/<TODO-github-user>/julie-therapie).

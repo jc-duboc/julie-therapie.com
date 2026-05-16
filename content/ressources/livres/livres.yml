@@ -1,0 +1,27 @@
+- title: "Incestée"
+  subtitle: "Le combat d'une victime"
+  description: "Témoignage et analyse clinique d'un parcours de victime d'inceste. Avec son regard de psychologue, Julie y propose des outils thérapeutiques pour les personnes négligées, maltraitées ou abusées dans leur enfance. Préface de Gérard Lopez."
+  image: /res/img/livres/incestee.jpg
+  image-alt: "Couverture du livre Incestée"
+  date: 2021-09-09
+  year: 2021
+  publisher: "Bookelis"
+  pages: 296
+  format: "Broché et Kindle"
+  isbn: "978-2-9576667-0-6"
+  category: "Trauma & inceste"
+  path: "https://www.amazon.fr/dp/2957666707"
+
+- title: "À l'enfant"
+  subtitle: "Pour une bientraitance éducative"
+  description: "Un texte court accompagné de photographies, en hommage à l'enfance — celle que nous avons été, celle que nous avons eue, celle qui demeure en nous. Un plaidoyer pour la bientraitance éducative et un rappel de l'impact des violences faites aux enfants."
+  image: /res/img/livres/a-l-enfant.jpg
+  image-alt: "Couverture du livre À l'enfant"
+  date: 2022-12-01
+  year: 2022
+  publisher: "Auto-édition"
+  pages: 50
+  format: "Broché et Kindle"
+  isbn: "979-8448910661"
+  category: "Parentalité & éducation"
+  path: "https://www.amazon.fr/dp/B0BNTZ6PCP"

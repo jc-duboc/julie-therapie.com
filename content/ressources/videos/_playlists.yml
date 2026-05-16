@@ -1,0 +1,34 @@
+# Manual overrides for the playlists shown on the Vidéos page.
+#
+# Optional. The fetcher (scripts/fetch-youtube-playlists.mjs) scrapes the
+# channel page on every build to discover new playlists automatically.
+# Entries below let you:
+#   - PIN order (manual entries come first, in the order listed here)
+#   - OVERRIDE the auto-derived slug / title shown in the URL and section heading
+#   - ADD a description shown under the section title
+#   - HIDE a playlist from the site with `hidden: true`
+#
+# Fields:
+#   id           (required) YouTube playlist ID (the value after list= in URLs)
+#   title        (optional) override the title scraped from YouTube
+#   slug         (optional) URL-safe identifier; defaults to a slug of the title
+#   description  (optional) italic line under the heading
+#   hidden       (optional) `true` to omit from the site
+#
+# Discovered playlists not listed here are appended at the end, alphabetically
+# ordered by their YouTube title.
+
+- id: PLRzKqfPtmi-94vh0fnkjBaiB9dhywmoBW
+  title: "Coup2point sur les i"
+  slug: coup2point
+  description: "L'émission de psychologie clinique -- échanges et entretiens."
+
+- id: PLRzKqfPtmi--QKAkLYo5fBWeuNbjbk4Bb
+  title: "Éducation"
+  slug: education
+  description: "Repères sur l'éducation, le développement et la parentalité."
+
+- id: PLRzKqfPtmi-_YWswZTNrqZLvktJztdQsN
+  title: "Incestée"
+  slug: incestee
+  description: "Témoignages et ressources autour de l'inceste, la mémoire traumatique et la reconstruction."

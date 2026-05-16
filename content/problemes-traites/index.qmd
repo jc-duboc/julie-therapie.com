@@ -1,0 +1,128 @@
+---
+title: "Problèmes traités"
+subtitle: "Les difficultés que j'accompagne en consultation"
+
+description: |
+  Catalogue des problématiques prises en charge, organisées par catégorie. Chaque entrée renvoie
+  vers les outils et ressources associés.
+---
+
+::: {.section-intro}
+Cette page liste les principales difficultés pour lesquelles je reçois. Elle n'est pas exhaustive --
+n'hésitez pas à me contacter si votre situation ne s'y retrouve pas clairement : nous verrons
+ensemble si un travail thérapeutique est indiqué et, si oui, sous quelle forme.
+:::
+
+## {{< fa heart-crack >}} Traumatismes & psychotraumatologie {#sec-trauma}
+
+Le **trauma** est au cœur de ma pratique. Un événement traumatique laisse des traces qui débordent
+la mémoire consciente : hypervigilance, reviviscences, évitements, dissociation, somatisations. Le
+travail consiste à réintégrer ce qui n'a pas pu l'être au moment de l'événement.
+
+- Traumas simples : agressions, accidents, deuils brutaux
+- Traumas complexes (ESPT-c) : violences répétées, traumatismes de l'enfance, négligence
+- Conséquences de violences conjugales, intrafamiliales, sexuelles
+- Stress post-traumatique différé, syndrome de stress post-traumatique
+- Deuils compliqués ou pathologiques
+
+::: {.tags}
+[Trauma](../ressources/outils/index.qmd#trauma){.tag}
+[ESPT](../ressources/outils/index.qmd#trauma){.tag}
+[Violences](../ressources/outils/index.qmd#trauma){.tag}
+[Deuil](../ressources/outils/index.qmd#deuil){.tag}
+:::
+
+## {{< fa cloud-rain >}} Troubles de l'humeur {#sec-humeur}
+
+- Épisodes dépressifs, dépressions chroniques
+- Burn-out (professionnel, parental, aidant)
+- Troubles de l'adaptation
+- Idées noires, idéation suicidaire (orientation vers prise en charge spécialisée si nécessaire)
+
+::: {.tags}
+[Dépression](../ressources/outils/index.qmd){.tag}
+[Burn-out](../ressources/outils/index.qmd){.tag}
+[Épuisement](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa wind >}} Troubles anxieux {#sec-anxiete}
+
+- Anxiété généralisée, inquiétudes envahissantes
+- Attaques de panique, agoraphobie
+- Phobies spécifiques, phobie sociale
+- TOC (troubles obsessionnels compulsifs)
+- Hypocondrie
+
+::: {.tags}
+[Anxiété](../ressources/outils/index.qmd){.tag}
+[Panique](../ressources/outils/index.qmd){.tag}
+[TOC](../ressources/outils/index.qmd){.tag}
+[Phobies](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa puzzle-piece >}} Neurodéveloppement {#sec-tnd}
+
+Accompagnement à tout âge, avant ou après diagnostic :
+
+- **TSA** -- Troubles du spectre autistique
+- **TDAH** -- Troubles de l'attention avec ou sans hyperactivité
+- **Troubles dys** (dyslexie, dyspraxie, dyscalculie) -- accompagnement psychologique des
+  retentissements
+- Haut potentiel intellectuel (HPI), profils atypiques
+
+::: {.tags}
+[TSA](../ressources/outils/index.qmd){.tag}
+[TDAH](../ressources/outils/index.qmd){.tag}
+[Neurodiversité](../ressources/outils/index.qmd){.tag}
+[HPI](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa users >}} Vie relationnelle & couple {#sec-relations}
+
+- **Thérapie de couple** : crises, communication, sexualité, infidélité, séparation
+- Conflits familiaux, relations parent-enfant difficiles
+- Difficultés relationnelles récurrentes
+- Travail sur les attachements et schémas relationnels
+
+::: {.tags}
+[Couple](../ressources/outils/index.qmd){.tag}
+[Famille](../ressources/outils/index.qmd){.tag}
+[Attachement](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa person-rays >}} Estime de soi & développement personnel {#sec-soi}
+
+- Manque de confiance en soi, sentiment d'imposture
+- Affirmation de soi
+- Questionnements identitaires (genre, orientation, identité culturelle)
+- Transitions de vie (parentalité, séparation, retraite, expatriation)
+
+::: {.tags}
+[Estime de soi](../ressources/outils/index.qmd){.tag}
+[Confiance](../ressources/outils/index.qmd){.tag}
+[Transition](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa child >}} Enfants & adolescents {#sec-enfants}
+
+- Difficultés émotionnelles et comportementales
+- Troubles scolaires, phobies scolaires
+- Conséquences d'un événement traumatique
+- Difficultés familiales, parents séparés
+- Accompagnement adolescent autour de l'identité, de l'anxiété, des troubles alimentaires
+  débutants
+
+::: {.tags}
+[Enfant](../ressources/outils/index.qmd){.tag}
+[Adolescent](../ressources/outils/index.qmd){.tag}
+[Scolarité](../ressources/outils/index.qmd){.tag}
+:::
+
+---
+
+::: {.callout-note appearance="simple"}
+## Vous ne savez pas si je peux vous aider ?
+
+[Contactez-moi](../prise-de-rdv/index.qmd) en quelques mots : je vous répondrai pour vous dire si
+ma pratique correspond à votre demande, ou vous orienter le cas échéant.
+:::

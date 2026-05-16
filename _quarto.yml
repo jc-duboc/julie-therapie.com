@@ -1,0 +1,137 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - .nojekyll
+    - CNAME
+    - "/res/**"
+    - "/libs/*.js"
+  render:
+    - "*.qmd"
+    - "content/**/*.qmd"
+    - "!TODO.md"
+    - "!README.md"
+    - "!CLAUDE.md"
+
+website:
+  title: "Julie Thérapie"
+  description: "Cabinet de psychothérapie - Julie-Christine Duboc, psychologue. Approche intégrative, traitement des causes par le travail sur les traumatismes. Consultations en visio et en présentiel (St Vigor, près du Havre)."
+  site-url: https://julie-therapie.com
+  favicon: /res/img/favicon.png
+  bread-crumbs: false
+  back-to-top-navigation: true
+  reader-mode: false
+  page-navigation: false
+
+  ### Announcement / under-construction banner ###
+  announcement:
+    content: "**Site en construction** &nbsp;·&nbsp; Le cabinet ouvre prochainement. Les informations affichées peuvent encore évoluer."
+    position: below-navbar
+    icon: cone-striped
+    type: warning
+    dismissable: false
+
+  ### Navbar ###
+  navbar:
+    background: primary
+    foreground: light
+    logo: /res/img/favicon.png
+    logo-alt: "Logo Julie Thérapie : un cerveau dans des mains formant un coeur"
+    title: "Julie Thérapie"
+    pinned: true
+    collapse: true
+    collapse-below: lg
+    left:
+      - href: index.qmd
+        text: "Accueil"
+      - href: content/problemes-traites/index.qmd
+        text: "Problèmes traités"
+      - href: content/consultations/index.qmd
+        text: "Consultations"
+      - text: "{{< fa hand-holding-heart >}} Ressources"
+        menu:
+          - text: "{{< fa list >}} Toutes les ressources"
+            href: content/ressources/index.qmd
+          - text: "{{< fa video >}} Vidéos"
+            href: content/ressources/videos/index.qmd
+          - text: "{{< fa book-open >}} Livres"
+            href: content/ressources/livres/index.qmd
+          - text: "{{< fa toolbox >}} Outils"
+            href: content/ressources/outils/index.qmd
+      - href: content/a-propos/index.qmd
+        text: "À propos"
+    right:
+      - href: content/prise-de-rdv/index.qmd
+        text: "Prendre rendez-vous"
+
+  ### Search ###
+  search:
+    location: navbar
+    type: overlay
+    collapse-after: 3
+
+  ### Sidebar ###
+  sidebar: false
+
+  ### Open Graph / Social cards ###
+  open-graph:
+    locale: fr_FR
+    site-name: "Julie Thérapie"
+    image: /res/img/og-image.svg
+    image-alt: "Julie Thérapie - cabinet de psychothérapie"
+  twitter-card:
+    image: /res/img/og-image.svg
+    card-style: summary_large_image
+
+  ### Footer ###
+  page-footer:
+    border: true
+    background: dark
+    left:
+      - text: "© 2026 Julie-Christine Duboc"
+      - text: "Mentions légales"
+        href: content/a-propos/index.qmd
+    center:
+      - text: "Cabinet de psychothérapie"
+      - text: "St Vigor (76) · Téléconsultation"
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/julie-christine-duboc-9b894a328/
+        aria-label: "LinkedIn"
+      - icon: envelope
+        href: "mailto:contact@julie-therapie.com"
+        aria-label: "Email"
+
+lightbox: true
+from: markdown+emoji
+toc: false
+comments: false
+
+brand: _brand.yml
+
+format:
+  html:
+    theme:
+      - default
+      - brand
+      - libs/styles.scss
+    grid:
+      sidebar-width: 0px
+      body-width: 950px
+      margin-width: 240px
+    fig-align: center
+    anchor-sections: true
+    footnotes-hover: true
+    crossrefs-hover: true
+    link-external-icon: false
+    link-external-newwindow: true
+    smooth-scroll: true
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: false
+  freeze: auto
+
+editor: source

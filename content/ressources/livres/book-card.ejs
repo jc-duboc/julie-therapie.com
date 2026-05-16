@@ -1,0 +1,25 @@
+```{=html}
+<div class="list grid book-card-grid">
+<% for (const item of items) { %>
+<article class="g-col-12 g-col-sm-6 book-card-wrapper" <%= metadataAttrs(item) %>>
+<div class="card h-100 book-card">
+<a class="book-card-cover" href="<%= item.path %>" target="_blank" rel="noopener" aria-label="Voir &laquo; <%= item.title %> &raquo; sur Amazon">
+<% if (item.image) { %><img class="book-card-cover-img" src="<%= item.image %>" alt="<%= item['image-alt'] || ('Couverture : ' + item.title) %>" loading="lazy" /><% } %>
+</a>
+<div class="card-body book-card-body">
+<h3 class="card-title book-card-title"><a class="book-card-title-link" href="<%= item.path %>" target="_blank" rel="noopener"><%= item.title %></a></h3>
+<% if (item.subtitle) { %><p class="book-card-subtitle"><%= item.subtitle %></p><% } %>
+<p class="book-card-meta">
+<% if (item.year) { %><span class="book-meta-item book-meta-year"><%= item.year %></span><% } %>
+<% if (item.pages) { %><span class="book-meta-item"><%= item.pages %> pages</span><% } %>
+<% if (item.publisher) { %><span class="book-meta-item"><%= item.publisher %></span><% } %>
+</p>
+<% if (item.description) { %><p class="book-card-desc"><%= item.description %></p><% } %>
+<% if (item.category) { %><p class="book-card-tags"><span class="tag"><%= item.category %></span></p><% } %>
+<a class="btn btn-sm btn-outline-primary book-card-link" href="<%= item.path %>" target="_blank" rel="noopener">Voir le livre <span aria-hidden="true">&rarr;</span></a>
+</div>
+</div>
+</article>
+<% } %>
+</div>
+```

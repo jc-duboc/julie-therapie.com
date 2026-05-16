@@ -1,0 +1,19 @@
+```{=html}
+<div class="list grid quarto-listing-cols-3 video-card-grid">
+<% for (const item of items) { %>
+<div class="g-col-12 g-col-sm-6 g-col-md-4 video-card-wrapper" <%= metadataAttrs(item) %>>
+<div class="card h-100 video-card">
+<button type="button" class="video-card-thumb-btn" data-video-id="<%= item['video-id'] || '' %>" aria-label="Lire « <%= item.title %> » dans la page">
+<% if (item.image) { %><img class="video-card-thumb-img" src="<%= item.image %>" alt="" loading="lazy" /><% } %>
+<span class="video-card-play" aria-hidden="true">&#9658;</span>
+</button>
+<div class="card-body">
+<h3 class="card-title video-card-title"><a class="video-card-title-link" href="<%= item.path %>" target="_blank" rel="noopener"><%= item.title %></a></h3>
+<% if (item.description) { %><p class="card-text video-card-desc"><%= item.description %></p><% } %>
+<% if (item.date) { %><p class="card-text"><small class="text-muted video-card-date"><%= item.date %></small></p><% } %>
+</div>
+</div>
+</div>
+<% } %>
+</div>
+```

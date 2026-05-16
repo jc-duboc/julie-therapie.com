@@ -1,0 +1,47 @@
+---
+title: "Livres"
+subtitle: "Mes publications et lectures recommandées"
+
+listing:
+  - id: mes-livres
+    contents: livres.yml
+    type: grid
+    grid-columns: 2
+    sort: "date desc"
+    fields: [image, title, description, date]
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    feed: false
+    template: book-card.ejs
+
+page-layout: full
+---
+
+::: {.section-intro}
+
+Mes publications -- témoignages et analyse clinique autour du trauma, de l'inceste et de la
+bientraitance éducative. Une bibliographie de lectures recommandées, classée par problématique,
+viendra s'ajouter au fil du temps.
+
+:::
+
+## Mes publications
+
+::: {#mes-livres}
+:::
+
+---
+
+## Lectures recommandées
+
+::: {.callout-note appearance="simple"}
+Une bibliographie thématique (trauma, couple et famille, parentalité, neurodiversité, estime de
+soi...) est en cours de constitution. Elle sera publiée ici dès qu'elle aura été stabilisée.
+:::
+
+---
+
+::: {.callout-tip appearance="simple"}
+Une lecture vous a marqué·e ? [Partagez-la moi.](../../prise-de-rdv/index.qmd)
+:::

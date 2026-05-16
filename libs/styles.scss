@@ -1,0 +1,646 @@
+/*-- scss:defaults --*/
+
+// Palette (mirrors _brand.yml so it is usable inside scss:defaults)
+$cream:           #FAF7F2 !default;
+$paper:           #F2EDE4 !default;
+$rich-black:      #00072D !default;
+$penn-blue:       #001C55 !default;
+$resolution-blue: #0A2472 !default;
+$lapis-blue:      #0E6BA8 !default;
+$uranian-blue:    #A6E1FA !default;
+$muted:           #5A6E85 !default;
+$amber:           #D4A574 !default;
+$amber-dark:      #A87E54 !default;
+
+$body-bg:    $cream !default;
+$body-color: $rich-black !default;
+
+$link-color:       $lapis-blue !default;
+$link-hover-color: $penn-blue !default;
+
+$navbar-bg: $resolution-blue !default;
+
+$card-border-radius: 0.6rem !default;
+$border-radius:      0.5rem !default;
+
+/*-- scss:rules --*/
+
+// --- Page foundations --------------------------------------------------------
+
+body {
+    background-color: $cream;
+    color: $rich-black;
+}
+
+main.content {
+    padding-top: 1.5rem;
+}
+
+// --- Navbar ------------------------------------------------------------------
+
+.navbar {
+    box-shadow: 0 2px 8px rgba($rich-black, 0.12);
+}
+
+.navbar-title {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: rgba($cream, 0.92) !important;
+    font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: $uranian-blue !important;
+}
+
+// --- Headings ----------------------------------------------------------------
+
+h1:not(.title) { color: $penn-blue; }
+h2 { color: $penn-blue; border-bottom: 2px solid $uranian-blue; padding-bottom: 0.3rem; }
+h3 { color: $resolution-blue; }
+h4 { color: $lapis-blue; }
+
+// --- Title block (page hero) -------------------------------------------------
+
+.quarto-title-block {
+    margin-bottom: 2rem;
+}
+
+.quarto-title h1.title {
+    color: $penn-blue;
+    font-family: "Lora", serif;
+}
+
+.quarto-title .subtitle {
+    color: $muted;
+    font-style: italic;
+    font-size: 1.15rem;
+}
+
+// --- About page (home) -------------------------------------------------------
+
+.quarto-about-trestles .about-entity .about-image,
+.quarto-about-jolla .about-image,
+.quarto-about-solana .about-image {
+    border-radius: 50%;
+    border: 6px solid $uranian-blue;
+    box-shadow: 0 6px 20px rgba($rich-black, 0.18);
+}
+
+.about-links .about-link {
+    color: $penn-blue;
+    border-color: $resolution-blue;
+}
+
+.about-links .about-link:hover {
+    background-color: $resolution-blue;
+    color: $cream;
+}
+
+// --- Cards -------------------------------------------------------------------
+
+.card {
+    border: 1px solid $uranian-blue;
+    border-radius: $card-border-radius;
+    box-shadow: 0 2px 8px rgba($rich-black, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba($rich-black, 0.15);
+}
+
+.card-body .card-title {
+    color: $penn-blue;
+    font-family: "Lora", serif;
+}
+
+// --- Callouts ----------------------------------------------------------------
+
+.callout {
+    border-radius: $border-radius;
+}
+
+.callout.callout-style-default {
+    background-color: $paper;
+}
+
+// --- Buttons -----------------------------------------------------------------
+
+.btn-primary {
+    background-color: $resolution-blue;
+    border-color: $resolution-blue;
+}
+
+.btn-primary:hover {
+    background-color: $penn-blue;
+    border-color: $penn-blue;
+}
+
+.btn-outline-primary {
+    color: $penn-blue;
+    border-color: $resolution-blue;
+}
+
+.btn-outline-primary:hover {
+    background-color: $resolution-blue;
+    color: $cream;
+}
+
+// --- Tags / badges -----------------------------------------------------------
+
+.tag, .badge.tag {
+    display: inline-block;
+    padding: 0.25rem 0.7rem;
+    margin: 0.15rem 0.2rem 0.15rem 0;
+    background-color: $uranian-blue;
+    color: $penn-blue;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.tag:hover {
+    background-color: $lapis-blue;
+    color: $cream;
+    text-decoration: none;
+}
+
+.tags {
+    margin: 0.8rem 0 1.2rem 0;
+}
+
+// --- Tariff / pricing rows ---------------------------------------------------
+
+.tariff-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.tariff-table th {
+    background-color: $resolution-blue;
+    color: $cream;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.tariff-table th:first-child { border-top-left-radius: $border-radius; }
+.tariff-table th:last-child { border-top-right-radius: $border-radius; }
+
+.tariff-table td {
+    background-color: $paper;
+    padding: 0.85rem 1rem;
+    border-top: 1px solid $cream;
+}
+
+.tariff-table tr td:first-child { border-left: 4px solid $resolution-blue; }
+
+.tariff-price {
+    font-weight: 600;
+    color: $penn-blue;
+    white-space: nowrap;
+}
+
+// --- Contact buttons ---------------------------------------------------------
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.2rem;
+    background-color: $paper;
+    border-left: 4px solid $resolution-blue;
+    border-radius: $border-radius;
+    color: $rich-black;
+    text-decoration: none;
+    transition: all 0.18s ease;
+}
+
+.contact-card:hover {
+    background-color: $uranian-blue;
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: $rich-black;
+}
+
+.contact-card .contact-icon {
+    font-size: 1.6rem;
+    color: $penn-blue;
+}
+
+.contact-card .contact-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.contact-card .contact-value {
+    font-size: 0.85rem;
+    color: $muted;
+}
+
+// --- Listings ----------------------------------------------------------------
+
+.quarto-listing-default .listing-title { color: $penn-blue; }
+
+// --- Footer ------------------------------------------------------------------
+
+.page-footer {
+    background-color: $penn-blue !important;
+    color: $cream;
+}
+
+.page-footer a {
+    color: $uranian-blue;
+}
+
+.page-footer a:hover {
+    color: $cream;
+}
+
+// --- Announcement banner (under-construction) --------------------------------
+
+.quarto-announcement {
+    background: linear-gradient(90deg, $amber-dark, $amber) !important;
+    color: $rich-black !important;
+    font-weight: 500;
+}
+
+.quarto-announcement a {
+    color: $rich-black;
+    text-decoration: underline;
+}
+
+// --- Approach quote ----------------------------------------------------------
+
+.approach-quote {
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: $penn-blue;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    max-width: 720px;
+    border-top: 2px solid $uranian-blue;
+    border-bottom: 2px solid $uranian-blue;
+    line-height: 1.5;
+}
+
+// --- Video listing cards -----------------------------------------------------
+
+.video-card {
+    border: 1px solid $uranian-blue;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba($rich-black, 0.18);
+}
+
+// Thumb is a real <button>: reset native button chrome, fill the card width.
+.video-card-thumb-btn {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: $penn-blue;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: block;
+    color: inherit;
+}
+
+.video-card-thumb-btn:focus-visible {
+    outline: 3px solid $lapis-blue;
+    outline-offset: -3px;
+}
+
+.video-card-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-card-play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba($penn-blue, 0.82);
+    color: $cream;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding-left: 5px; // optical alignment for the play glyph
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    pointer-events: none; // clicks fall through to the button
+}
+
+.video-card-thumb-btn:hover .video-card-play,
+.video-card-thumb-btn:focus-visible .video-card-play {
+    background: $resolution-blue;
+    transform: scale(1.08);
+    box-shadow: 0 4px 14px rgba($rich-black, 0.35);
+}
+
+// Once a card is "played", the button is swapped for this iframe wrapper.
+.video-card-iframe-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: $penn-blue;
+    overflow: hidden;
+}
+
+.video-card-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.video-card-title {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 0.4rem;
+}
+
+.video-card-title-link {
+    color: $penn-blue;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.18s ease, color 0.18s ease;
+}
+
+.video-card-title-link:hover,
+.video-card-title-link:focus-visible {
+    color: $resolution-blue;
+    background-size: 100% 1px;
+    text-decoration: none;
+}
+
+.video-card-desc {
+    font-size: 0.88rem;
+    color: $rich-black;
+    opacity: 0.85;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+// --- Book listing cards ------------------------------------------------------
+
+.book-card-grid {
+    gap: 1.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.book-card {
+    border: 1px solid $uranian-blue;
+    border-radius: $card-border-radius;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.book-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba($rich-black, 0.18);
+}
+
+.book-card-cover {
+    flex: 0 0 auto;
+    width: 38%;
+    max-width: 180px;
+    background: linear-gradient(135deg, $paper, $uranian-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.8rem;
+    text-decoration: none;
+}
+
+.book-card-cover-img {
+    max-width: 100%;
+    max-height: 240px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 6px 18px rgba($rich-black, 0.25);
+    border-radius: 2px;
+    transition: transform 0.18s ease;
+}
+
+.book-card-cover:hover .book-card-cover-img {
+    transform: scale(1.03);
+}
+
+.book-card-body {
+    padding: 1.1rem 1.2rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.book-card-title {
+    font-family: "Lora", serif;
+    font-size: 1.25rem;
+    color: $penn-blue;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.book-card-title-link {
+    color: $penn-blue;
+    text-decoration: none;
+}
+
+.book-card-title-link:hover,
+.book-card-title-link:focus-visible {
+    color: $resolution-blue;
+    text-decoration: underline;
+}
+
+.book-card-subtitle {
+    font-style: italic;
+    color: $muted;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.book-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.7rem;
+    font-size: 0.82rem;
+    color: $muted;
+    margin: 0.15rem 0 0.25rem 0;
+}
+
+.book-meta-item:not(:last-child)::after {
+    content: "·";
+    margin-left: 0.7rem;
+    color: $uranian-blue;
+}
+
+.book-meta-year {
+    font-weight: 600;
+    color: $penn-blue;
+}
+
+.book-card-desc {
+    font-size: 0.92rem;
+    color: $rich-black;
+    opacity: 0.88;
+    line-height: 1.45;
+    margin: 0.2rem 0 0.4rem 0;
+}
+
+.book-card-tags {
+    margin: 0;
+}
+
+.book-card-link {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+@media (max-width: 640px) {
+    .book-card {
+        flex-direction: column;
+    }
+    .book-card-cover {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.4rem 1rem;
+    }
+    .book-card-cover-img {
+        max-height: 200px;
+    }
+}
+
+// --- Navbar dropdown (Ressources menu) ---------------------------------------
+
+.navbar .dropdown-menu {
+    background-color: $cream;
+    border: 1px solid $uranian-blue;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 22px rgba($rich-black, 0.18);
+    padding: 0.4rem 0;
+    min-width: 240px;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: $penn-blue;
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item .dropdown-text > i,
+.navbar .dropdown-menu .dropdown-item > i {
+    color: $lapis-blue;
+    width: 1.15rem;
+    flex-shrink: 0;
+    text-align: center;
+    transition: color 0.15s ease;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus,
+.navbar .dropdown-menu .dropdown-item.active {
+    background-color: $uranian-blue;
+    color: $penn-blue;
+    padding-left: 1.25rem;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover .dropdown-text > i,
+.navbar .dropdown-menu .dropdown-item:focus .dropdown-text > i,
+.navbar .dropdown-menu .dropdown-item.active .dropdown-text > i {
+    color: $resolution-blue;
+}
+
+// FA shortcodes in the navbar parent "Ressources" trigger
+.navbar .navbar-nav .nav-link > .menu-text > i,
+.navbar .navbar-nav .nav-link > i {
+    margin-right: 0.4rem;
+    color: $uranian-blue;
+}
+
+.navbar .navbar-nav .nav-link:hover > .menu-text > i,
+.navbar .navbar-nav .nav-link.active > .menu-text > i {
+    color: $cream;
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+    border-top-color: rgba($resolution-blue, 0.2);
+    margin: 0.3rem 0;
+}
+
+.navbar .dropdown-menu .dropdown-header {
+    color: $muted;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem 0.2rem 1rem;
+}
+
+// --- Section intro -----------------------------------------------------------
+
+.section-intro {
+    background-color: $paper;
+    padding: 1.5rem 1.8rem;
+    border-radius: $border-radius;
+    border-left: 4px solid $resolution-blue;
+    margin: 1.5rem 0 2rem 0;
+}
+
+// --- Responsive tweaks -------------------------------------------------------
+
+@media (max-width: 768px) {
+    .approach-quote {
+        font-size: 1.15rem;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,48 @@
+---
+title: "Ressources"
+subtitle: "Vidéos, livres et outils pour accompagner le travail thérapeutique"
+---
+
+::: {.section-intro}
+
+Cette section rassemble des ressources que je produis ou que je recommande à mes patient·e·s.
+Elle a vocation à grandir au fil des mois -- n'hésitez pas à me faire part de vos suggestions
+ou des liens qui vous ont aidé·e.
+
+:::
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+### {{< fa video >}} Vidéos
+
+Les vidéos de ma chaîne YouTube, classées par playlist (émissions, éducation, thématiques
+spécifiques).
+
+[→ Voir les vidéos](videos/index.qmd){.btn .btn-outline-primary}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### {{< fa book-open >}} Livres
+
+Une bibliographie de lecture, sélectionnée selon les problématiques traitées.
+
+[→ Voir les livres](livres/index.qmd){.btn .btn-outline-primary}
+:::
+
+::: {.g-col-12 .g-col-md-4}
+### {{< fa toolbox >}} Outils
+
+Fiches pratiques, exercices et documents à télécharger, indexés par thématique.
+
+[→ Voir les outils](outils/index.qmd){.btn .btn-outline-primary}
+:::
+
+:::
+
+---
+
+::: {.callout-tip appearance="simple"}
+Une ressource vous aurait aidé ? Un lien cassé ? Une suggestion ?
+[Faites-le moi savoir.](../prise-de-rdv/index.qmd)
+:::

@@ -1,0 +1,18 @@
+---
+title: "Page introuvable"
+---
+
+```{=html}
+<style>
+h1.title { text-align: center; color: var(--bs-secondary); }
+.notfound-msg { text-align: center; max-width: 560px; margin: 2rem auto; }
+</style>
+```
+
+::: {.notfound-msg}
+
+La page que vous cherchez n'existe pas ou a été déplacée.
+
+[← Retour à l'accueil](/){.btn .btn-primary}
+
+:::

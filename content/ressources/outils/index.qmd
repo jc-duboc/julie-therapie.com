@@ -1,0 +1,69 @@
+---
+title: "Outils"
+subtitle: "Fiches pratiques, exercices et documents à télécharger"
+---
+
+::: {.section-intro}
+
+Documents, exercices et fiches outils à utiliser entre les séances. Bibliothèque en cours de
+constitution.
+
+:::
+
+## Thématiques
+
+Cliquez sur une thématique pour aller directement à la section correspondante.
+
+::: {.tags}
+[Trauma](#trauma){.tag}
+[Estime de soi](#estime-de-soi){.tag}
+[Anxiété](#anxiete){.tag}
+[Dépression](#depression){.tag}
+[Couple](#couple){.tag}
+[Parentalité](#parentalite){.tag}
+[Neurodiversité](#neurodiversite){.tag}
+[Deuil](#deuil){.tag}
+[Sommeil](#sommeil){.tag}
+:::
+
+### Trauma {#trauma}
+
+À venir.
+
+### Estime de soi {#estime-de-soi}
+
+À venir.
+
+### Anxiété {#anxiete}
+
+À venir.
+
+### Dépression {#depression}
+
+À venir.
+
+### Couple {#couple}
+
+À venir.
+
+### Parentalité {#parentalite}
+
+À venir.
+
+### Neurodiversité {#neurodiversite}
+
+À venir.
+
+### Deuil {#deuil}
+
+À venir.
+
+### Sommeil {#sommeil}
+
+À venir.
+
+---
+
+::: {.callout-tip appearance="simple"}
+Une fiche outil utile vous manque ? [Suggérez-la moi.](../../prise-de-rdv/index.qmd)
+:::

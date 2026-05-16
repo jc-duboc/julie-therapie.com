@@ -1,0 +1,89 @@
+name: Render and Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Daily at 04:17 UTC so the Vidéos page picks up new YouTube uploads
+    # without anyone having to push a commit.
+    - cron: "17 4 * * *"
+
+# Only one deploy at a time; do not cancel in-flight runs.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Refresh YouTube playlist data
+        run: node scripts/fetch-youtube-playlists.mjs
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.9.12"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Render Quarto site
+        run: quarto render
+
+      - name: Check SITE_PASSWORD secret is set
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: |
+          if [[ -z "$SITE_PASSWORD" ]]; then
+            echo "::error::SITE_PASSWORD secret is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Strip content-leaking artefacts
+        # staticrypt only encrypts HTML, so the full-text search index, the
+        # listings metadata, and the public sitemap would otherwise leak the
+        # site contents to anyone who hits those URLs directly.
+        run: |
+          rm -f _site/search.json _site/sitemap.xml
+          find _site -name "listings.json" -type f -print -delete
+
+      - name: Install staticrypt
+        run: npm install -g staticrypt
+
+      - name: Encrypt rendered site
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: staticrypt _site/* -r -d _site -p "$SITE_PASSWORD" --short
+
+      - name: Fix permissions
+        run: |
+          chmod -v -R +rX _site | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

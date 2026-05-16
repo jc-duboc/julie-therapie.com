@@ -1,0 +1,145 @@
+---
+pagetitle: "Julie-Christine Duboc, Psychologue/Thérapeute"
+
+title: "Julie-Christine Duboc"
+subtitle: "Psychologue clinicienne · Psychothérapeute"
+
+image: res/img/avatar.jpg
+image-alt: "Portrait de Julie-Christine Duboc (image temporaire)"
+
+about:
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - text: "Prendre rendez-vous"
+      icon: calendar-check
+      href: content/prise-de-rdv/index.qmd
+      aria-label: "Page de prise de rendez-vous"
+    - text: "Téléphone"
+      icon: telephone
+      href: "tel:+33277161118"
+      aria-label: "Appeler le cabinet"
+    - text: "Email"
+      icon: envelope
+      href: "mailto:juliechristineduboc@gmail.com"
+      aria-label: "Envoyer un email"
+    - text: "LinkedIn"
+      icon: linkedin
+      href: https://www.linkedin.com/in/julie-christine-duboc-9b894a328/
+      aria-label: "Profil LinkedIn"
+
+website:
+  open-graph:
+    description: "Psychologue clinicienne à St Vigor (près du Havre) et en téléconsultation. Approche intégrative centrée sur les traumatismes."
+---
+
+::: {.section-intro}
+**Bienvenue.** Je suis psychologue clinicienne diplômée de l'Université Paris 8
+(Master de psychologie clinique et psychopathologie, 2016) et titulaire d'un
+Diplôme universitaire de Victimologie (Paris 5, 2020). Mon cabinet, en cours
+d'installation à **St Vigor (Seine-Maritime, près du Havre)**, accueille
+adultes, adolescents, enfants et couples. La majorité des séances ont lieu en
+**téléconsultation**, ce qui me permet de recevoir aussi bien depuis la
+Normandie qu'à distance.
+
+**Langues parlées :** Français · English · Español
+
+:::
+
+## Mon approche
+
+::: {.approach-quote}
+Tout symptôme est la résultante d'une cause. Plutôt que de chercher à le faire
+taire, nous cherchons ensemble ce qui le nourrit -- très souvent un **trauma**,
+parfois ancien, parfois oublié -- pour le traiter à la source.
+:::
+
+J'allie deux modalités de travail :
+
+- **Psychothérapie classique (verbale)** : un espace de parole structuré, adapté
+  à la majorité des demandes (humeur, anxiété, questionnements personnels,
+  estime de soi).
+- **Thérapie psychocorporelle** : un travail qui inclut le corps,
+  particulièrement adapté aux traumatismes lorsqu'ils résistent à l'élaboration
+  purement verbale.
+
+Les deux approches sont combinables au sein d'une même séance longue.
+
+--------------------------------------------------------------------------------
+
+## Ce que je prends en charge
+
+::: {.grid}
+::::: {.g-col-12 .g-col-md-6}
+**Traumatismes & psychotraumatologie**
+
+- Traumas simples et complexes (PTSD, ESPT-c)
+- Violences subies, deuils traumatiques
+- Conséquences durables d'événements de vie
+:::::
+
+::::: {.g-col-12 .g-col-md-6}
+**Troubles de l'humeur & anxiété**
+
+- Dépression, épuisement, burn-out
+- Anxiété généralisée, attaques de panique
+- TOC, phobies
+:::::
+
+::::: {.g-col-12 .g-col-md-6}
+**Neurodéveloppement (tout âge)**
+
+- TSA (troubles du spectre autistique)
+- TDAH chez l'enfant, l'adolescent et l'adulte
+- Accompagnement post-diagnostic
+:::::
+
+::::: {.g-col-12 .g-col-md-6}
+**Vie relationnelle & estime de soi**
+
+- Thérapie de couple
+- Difficultés relationnelles, conflits familiaux
+- Estime de soi, affirmation de soi
+:::::
+
+:::
+
+[→ Voir le détail des problématiques
+traitées](content/problemes-traites/index.qmd){.btn .btn-outline-primary}
+
+--------------------------------------------------------------------------------
+
+## En pratique
+
+::: {.grid}
+::::: {.g-col-12 .g-col-md-4}
+### {{< fa video >}} Consultations
+
+Visio principalement, présentiel possible à St Vigor pour la première séance.
+
+[→ Tarifs &
+modalités](content/consultations/index.qmd){.btn .btn-sm .btn-outline-primary}
+:::::
+
+::::: {.g-col-12 .g-col-md-4}
+### {{< fa calendar-check >}} Rendez-vous
+
+Par téléphone, SMS, email, WhatsApp ou Messenger. Le créneau est réservé une
+fois le paiement effectué.
+
+[→ Prendre
+rendez-vous](content/prise-de-rdv/index.qmd){.btn .btn-sm .btn-outline-primary}
+:::::
+
+::::: {.g-col-12 .g-col-md-4}
+### {{< fa toolbox >}} Ressources
+
+Vidéos de ma chaîne YouTube, livres et fiches outils que je propose en
+complément des séances, classés par thématique.
+
+[→ Explorer les
+ressources](content/ressources/index.qmd){.btn .btn-sm .btn-outline-primary}
+:::::
+
+:::

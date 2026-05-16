@@ -1,0 +1,56 @@
+# See:
+## - https://posit-dev.github.io/brand-yml/
+## - https://quarto.org/docs/authoring/brand.html
+## - https://quarto.org/docs/reference/metadata/brand.html
+
+meta:
+  name: Julie Thérapie
+  link: https://julie-therapie.com
+
+color:
+  palette:
+    rich-black:      "#00072D"
+    penn-blue:       "#001C55"
+    resolution-blue: "#0A2472"
+    lapis-blue:      "#0E6BA8"
+    uranian-blue:    "#A6E1FA"
+    cream:           "#FAF7F2"
+    paper:           "#F2EDE4"
+    muted-blue:      "#5A6E85"
+    amber:           "#D4A574"
+    amber-dark:      "#A87E54"
+  background: cream
+  foreground: rich-black
+  primary: resolution-blue
+  secondary: lapis-blue
+  tertiary: penn-blue
+  success: lapis-blue
+  info: uranian-blue
+  warning: amber-dark
+  light: cream
+  dark: penn-blue
+
+typography:
+  fonts:
+    - family: Lora
+      source: google
+      weight: [400, 500, 600, 700]
+      style: [normal, italic]
+    - family: Inter
+      source: google
+      weight: [400, 500, 600, 700]
+  base:
+    family: Inter
+    line-height: 1.65
+    size: 1rem
+  headings:
+    family: Lora
+    weight: 600
+    color: tertiary
+    line-height: 1.25
+  link:
+    color: secondary
+    decoration: underline
+  monospace:
+    family: "JetBrains Mono"
+    size: 0.9em
