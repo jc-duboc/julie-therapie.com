@@ -1,7 +1,6 @@
 # julie-therapie.com
 
-Site web du cabinet de psychothérapie de **Julie-Christine Duboc** (St Vigor, Seine-Maritime, près
-du Havre). Bâti avec [Quarto](https://quarto.org) et publié sur GitHub Pages.
+Site web du cabinet de psychothérapie de **Julie-Christine Duboc** (Seine-Maritime). Bâti avec [Quarto](https://quarto.org) et publié sur GitHub Pages.
 
 Production : <https://julie-therapie.com>
 
@@ -9,11 +8,25 @@ Production : <https://julie-therapie.com>
 
 ## Pour les agents IA
 
-Avant d'éditer le site, lisez [`CLAUDE.md`](./CLAUDE.md) (contexte, ton, conventions).
+Avant d'éditer le site, lisez [`CLAUDE.md`](./CLAUDE.md) (contexte, ton, conventions, et
+procédure de premier démarrage pour un utilisateur non technique).
 
-## Démarrage rapide
+## Démarrage assisté (Windows, sans installation manuelle)
 
-Pour reprendre le projet sur un nouvel ordinateur :
+1. Ouvrir l'application Claude (onglet Code).
+2. Lui demander : « Aide-moi à installer tout ce qu'il faut pour le site `julie-therapie.com`,
+   le dépôt est sur `https://github.com/jc-duboc/julie-therapie.com`. »
+3. Autoriser les installations de Git, Quarto, Node et l'outil GitHub. Le projet sera cloné
+   dans `Documents\julie-therapie.com` (par défaut).
+
+Pour les modifications ensuite : ouvrir Claude Code dans le dossier `julie-therapie.com` et
+lui dire ce qu'on veut changer (« remplace le tarif des consultations adultes par 70 euros »,
+« ajoute une vidéo dans la page Ressources », etc.). Il s'occupe du reste, y compris la
+publication.
+
+## Démarrage rapide (utilisateur avancé)
+
+Pour reprendre le projet manuellement sur un nouvel ordinateur :
 
 1. [Installer les prérequis](#1-installer-les-prerequis)
 2. [Cloner le dépôt](#2-cloner-le-depot)
@@ -66,12 +79,9 @@ modifier les pages. RStudio fonctionne aussi.
 Dans un terminal :
 
 ```bash
-git clone https://github.com/<utilisateur-github>/julie-therapie.git
-cd julie-therapie
+git clone https://github.com/jc-duboc/julie-therapie.com.git
+cd julie-therapie.com
 ```
-
-> Remplacez `<utilisateur-github>` par le nom de l'utilisateur ou de l'organisation GitHub qui
-> héberge le dépôt.
 
 ---
 
@@ -201,17 +211,6 @@ git push                          # publier
 
 Une fois le push effectué, l'onglet **Actions** sur GitHub montre l'avancement du déploiement
 (2-4 minutes en général). Le site est ensuite disponible sur <https://julie-therapie.com>.
-
-### Configuration initiale (à faire **une seule fois** côté GitHub)
-
-1. Dans **Settings → Pages**, choisir comme **Source : GitHub Actions**.
-2. Dans **Settings → Pages**, ajouter le **domaine personnalisé** : `julie-therapie.com` (le
-   fichier `CNAME` est déjà au bon endroit).
-3. Configurer chez le bureau d'enregistrement (Namecheap) :
-   - **ALIAS / ANAME / CNAME** vers `<utilisateur-github>.github.io`
-   - **A records** vers les IP GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153,
-     185.199.111.153)
-4. Cocher **Enforce HTTPS** une fois le certificat émis (quelques minutes après).
 
 ---
 
