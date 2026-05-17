@@ -56,22 +56,33 @@ qu'à distance.
 
 ::: {.full-width}
 
-## Mon approche
+## Mon approche {.text-center}
 
 ::: {.approach-quote}
-Tout symptôme est la résultante d'une cause. Plutôt que de chercher à le faire
-taire, nous cherchons ensemble ce qui le nourrit -- très souvent un **trauma**,
-parfois ancien, parfois oublié -- pour le traiter à la source.
+Tout symptôme est la résultante d'une cause.\
+Plutôt que de chercher à le faire taire, nous cherchons ensemble ce qui le
+nourrit -- très souvent un **trauma**, souvent ancien, parfois oublié -- pour
+le traiter à la source.
 :::
 
+::: {.lead}
 J'allie deux modalités de travail :
+:::
 
-- **Psychothérapie classique (verbale)** : un espace de parole structuré, adapté
-  à la majorité des demandes (humeur, anxiété, questionnements personnels,
-  estime de soi).
-- **Thérapie psychocorporelle** : un travail qui inclut le corps,
-  particulièrement adapté aux traumatismes lorsqu'ils résistent à l'élaboration
-  purement verbale.
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+**Psychothérapie classique (verbale)** : un espace de parole structuré, adapté
+à la majorité des demandes (humeur, anxiété, questionnements personnels, estime
+de soi).
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**Thérapie psychocorporelle** : un travail qui inclut le corps, particulièrement
+adapté aux traumatismes lorsqu'ils résistent à l'élaboration purement verbale.
+:::
+
+:::
 
 Les deux approches sont **complémentaires** et combinables au sein d'une
 **séance double** afin que les effets soient **durables**.
@@ -87,7 +98,16 @@ Les deux approches sont **complémentaires** et combinables au sein d'une
 - Traumas sexuels : inceste, viol
 - Traumas simples et complexes (PTSD, ESPT-c)
 - Violences subies, deuils traumatiques
-- Suivis judiciaires (violences sur autrui)
+- Harcèlement
+:::::
+
+::::: {.g-col-12 .g-col-md-6}
+**Suivis judiciaires**
+
+- Violences conjugales
+- Agressions sexuelles
+- Violences sur enfants
+- Harcèlement
 :::::
 
 ::::: {.g-col-12 .g-col-md-6}
@@ -96,6 +116,7 @@ Les deux approches sont **complémentaires** et combinables au sein d'une
 - Dépression, épuisement, burn-out
 - Anxiété généralisée, attaques de panique
 - TOC, phobies
+- Agressivité
 - Troubles bipolaires, troubles alimentaires
 :::::
 
@@ -122,6 +143,7 @@ Les deux approches sont **complémentaires** et combinables au sein d'une
 - Mal de dos, fibromyalgie
 - Asthme, eczéma
 - Douleurs génitales ou sexuelles
+- Addictions
 :::::
 
 :::

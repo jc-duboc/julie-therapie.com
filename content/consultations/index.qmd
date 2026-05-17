@@ -1,13 +1,12 @@
 ---
 title: "Consultations & tarifs"
-subtitle: "Les différents formats de séance que je propose"
 
 description-meta: "Formats de séance proposés par Julie-Christine Duboc : psychothérapie verbale, thérapie psychocorporelle, séance mixte, thérapie de couple. Tarifs (50 € / 90 €), modalités de paiement et de réservation. Téléconsultation principalement, présentiel sur demande en Haute-Normandie."
 ---
 
 ::: {.section-intro}
 
-Toutes les séances ont lieu en **téléconsultation** (visio sécurisée). Le cabinet est en
+Les séances ont principalement lieu en **téléconsultation** (visio sécurisée). Le cabinet est en
 **Haute-Normandie** ; les modalités d'accueil en présentiel sont communiquées sur demande.
 
 **Horaires :** du lundi au samedi, de 9h à 21h.
@@ -29,7 +28,7 @@ demandes : troubles de l'humeur, anxiété, questionnements personnels, estime d
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-### {{< fa person-arrows >}} Thérapie psychocorporelle
+### {{< fa person >}} Thérapie psychocorporelle
 
 Un travail qui inclut le corps -- respiration, ressenti, mouvement -- particulièrement adapté
 lorsque la parole seule peine à atteindre ce qui est figé : traumas, blocages somatiques,
