@@ -21,6 +21,7 @@ Thumbs.db
 *.Rproj
 
 **/*.quarto_ipynb
+*.local.md
 
 TODO.md
 _old/

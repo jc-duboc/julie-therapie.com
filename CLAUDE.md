@@ -143,7 +143,7 @@ IA dès la levée de l'encryption. Ce qui est déjà en place :
 Le SEO on-site ci-dessus pèse beaucoup moins que la présence locale pour un cabinet de
 psychothérapie. Pour Julie, l'impact réel proviendra de :
 
-1. **Google Business Profile**: ce qui apparaît dans Google Maps et dans le panneau de droite des recherches « psychologue [ville] ».
+1. **Google Business Profile**: ce qui apparaît dans Google Maps et dans le panneau de droite des recherches « psychologue <ville> ».
 2. **Doctolib**, même sans système de réservation en ligne (Julie utilise virement + téléphone).
    Une fiche profil sur Doctolib remonte presque toujours en première page Google pour les recherches santé. Backlink à très forte autorité.
 3. **Psychologue.net, Therapeutes.com, Annuaire des thérapeutes**: annuaires français spécialisés, gratuit ou freemium. Backlinks supplémentaires.
@@ -208,7 +208,7 @@ cd julie-therapie.com
 
 ### Cycle de modification
 
-1. Si il y a des modifications non-commit/pushed au démarrage d'une nouvelle session, le signaler a l'utilisateur et proposer de publier/mettre a jour le site avant de commencer une nouvelle session de modifications.
+1. Si il y a des modifications non-commit/pushed au démarrage d'une nouvelle session, le signaler a l'utilisateur et proposer de publier/mettre a jour le site avant de commencer une nouvelle session de modifications (ou de ne rien faire -> combiner les changements antérieurs avec les futurs en une seule vague)
 2. Toujours effectuer un `git pull` en début de session/chat.
 3. Toujours lancer `quarto preview` en arrière-plan et donner l'URL locale (typiquement `http://localhost:4444`) pour que l'utilisateur voie le rendu des changements effectués en temps réel.
 4. Si les instructions sont claires, faire les modifications demandées sans demander confirmation.
