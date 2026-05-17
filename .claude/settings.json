@@ -1,4 +1,13 @@
 {
+  "model": "claude-opus-4-7",
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
+    "DISABLE_TELEMETRY": "1",
+    "ENABLE_PROMPT_CACHING_1H": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0"
+  },
+  "skipAutoPermissionPrompt": true,
   "permissions": {
     "allow": [
       "Bash(git status)",
@@ -26,7 +35,6 @@
       "Bash(git remote -v)",
       "Bash(git remote show *)",
       "Bash(git --version)",
-
       "Bash(quarto preview)",
       "Bash(quarto preview *)",
       "Bash(quarto render)",
@@ -37,12 +45,10 @@
       "Bash(quarto install *)",
       "Bash(quarto list *)",
       "Bash(quarto --version)",
-
       "Bash(node scripts/fetch-youtube-playlists.mjs)",
       "Bash(node scripts/fetch-youtube-playlists.mjs *)",
       "Bash(node --version)",
       "Bash(npm --version)",
-
       "Bash(gh auth status)",
       "Bash(gh auth login)",
       "Bash(gh auth login *)",
@@ -54,7 +60,6 @@
       "Bash(gh api user)",
       "Bash(gh api user *)",
       "Bash(gh --version)",
-
       "Bash(winget --version)",
       "Bash(winget search *)",
       "Bash(winget list *)",
@@ -62,14 +67,12 @@
       "Bash(winget install --id OpenJS.NodeJS.LTS*)",
       "Bash(winget install --id Quarto.Quarto*)",
       "Bash(winget install --id GitHub.cli*)",
-
       "Bash(ls)",
       "Bash(ls *)",
       "Bash(pwd)",
       "Bash(mkdir *)",
       "Bash(where *)",
       "Bash(which *)",
-
       "Skill(quarto-authoring)",
       "Skill(brand-yml)",
       "Skill(frontend-design)",
@@ -90,6 +93,7 @@
       "Bash(git rebase*)",
       "Bash(rm -rf*)",
       "Bash(rm -fr*)"
-    ]
+    ],
+    "defaultMode": "acceptEdits"
   }
 }
