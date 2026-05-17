@@ -1,6 +1,53 @@
-# CLAUDE.md
+# Guidelines
 
-## Pour qui
+Take your time before answering. Depth and genuine engagement matter more than speed. Treat every question as worth thinking through slowly and with maximum effort. The thinking is not preparation for the answer, the thinking IS the answer finding its shape.
+
+## Communication
+
+- Brutal honesty. Realistic takes over maybes. Be skeptical. Criticism welcome.
+- Answer concisely. No fluff. Keep explanations short.
+- Ask questions when intent is unclear. Don't guess.
+- Don't mimic user's tone or emotional undertone.
+
+## Workflow
+
+- Always read the project's local `CLAUDE.md` if one exists.
+- When a project contains `.claude/skills/*/SKILL.md`, list those skills before starting work and read the relevant skill when the task matches it.
+- Use `date` command before web searches to know the precise current date.
+- Limit actions to what's required for the user's request.
+- Keep reasoning private; present conclusions and key steps.
+- Remind user to reload/re-source/re-install modified files before running dependent code. Do it yourself if you can.
+
+## Context Engineering
+
+You are a CONTEXT ENGINEER. Every irrelevant token degrades response quality. Trim context to precisely what's needed.
+- If you don't care about the output of a command, pipe it to /dev/null
+- If there might be information you need in the output, pipe it to a /tmp/ file and grep it with relevnt filters/regex to get only what you need.
+- Avoid reading entire files, unless they are small. Always grep first to explore.
+- When a command has a 'quiet' flag, use it.
+- Use `| tail` when only the last outputs/lines are relevant.
+
+## Subagent Discipline
+
+- Prefer inline work for tasks under ~5 tool calls. Subagents have overhead — don't delegate trivially.
+- When using subagents, include output rules: "Final response under 2000 characters. List outcomes, not process."
+- Never call TaskOutput twice for the same subagent. If it times out, increase the timeout — don't re-read.
+
+## File Reading
+
+- Read files with purpose. Before reading a file, know what you're looking for.
+- Use Grep to locate relevant sections before reading entire large files.
+- Never re-read a file you've already read in this session, unless it has changed.
+- For files over 500 lines, use offset/limit to read only the relevant section.
+
+## Responses
+
+- Don't echo back file contents you just read, the user can see them.
+- Don't narrate tool calls ("Let me read the file..." / "Now I'll edit..."). Just do it.
+- Keep explanations proportional to complexity. Simple changes need one sentence, not three paragraphs.
+- Do not try to estimate cost and time required to implement a project/feature, unless explicitely asked.
+
+# This project
 
 Site du **cabinet de psychothérapie de Julie-Christine Duboc**, psychologue clinicienne (Master psychologie clinique Paris 8, 2016 ; DU Victimologie Paris 5, 2020)
 
@@ -64,9 +111,9 @@ Actions (inspiré de `robjhyndman/quarto-password`). Conséquences :
   `Render Quarto site` et `Upload artifact` dans `publish.yml`, puis retirer aussi le secret du
   repo et le bandeau « site en construction » dans `_quarto.yml`. **Tout le reste** (robots.txt
   final, llms.txt, JSON-LD, sitemap auto-généré) s'active alors automatiquement, voir la
-  section « SEO & découvrabilité » plus bas.
+  section SEO et Découvrabilité plus bas.
 
-## SEO & découvrabilité
+## SEO
 
 Le site est instrumenté pour être trouvable par les moteurs de recherche et par les assistants
 IA dès la levée de l'encryption. Ce qui est déjà en place :
@@ -91,36 +138,25 @@ IA dès la levée de l'encryption. Ce qui est déjà en place :
 - **Sitemap** : Quarto la génère automatiquement (`_site/sitemap.xml`), supprimée pendant
   l'encryption, présente dès la levée.
 
-### Checklist au jour du lancement (hors `publish.yml`)
+## Découvrabilité
 
 Le SEO on-site ci-dessus pèse beaucoup moins que la présence locale pour un cabinet de
-psychothérapie. Pour Julie, l'impact réel viendra de :
+psychothérapie. Pour Julie, l'impact réel proviendra de :
 
-1. **Google Business Profile** -- créer la fiche, valider l'adresse (par carte postale ou
-   téléphone), ajouter horaires, photos, lien vers le site. C'est ce qui apparaît dans Google
-   Maps et dans le panneau de droite des recherches « psychologue [ville] ».
-2. **Doctolib** -- même sans système de réservation en ligne (Julie utilise virement +
-   téléphone), une fiche profil sur Doctolib remonte presque toujours en première page Google
-   pour les recherches santé. Backlink à très forte autorité.
-3. **Psychologue.net, Therapeutes.com, Annuaire des thérapeutes** -- annuaires français
-   spécialisés, gratuit ou freemium. Backlinks supplémentaires.
-4. **Google Search Console** -- ajouter `julie-therapie.com`, soumettre le sitemap
-   (`https://julie-therapie.com/sitemap.xml`) pour accélérer l'indexation initiale.
-5. **Bing Webmaster Tools** -- même chose pour Bing (et donc indirectement pour ChatGPT
-   Search, qui utilise l'index Bing).
+1. **Google Business Profile**: ce qui apparaît dans Google Maps et dans le panneau de droite des recherches « psychologue [ville] ».
+2. **Doctolib**, même sans système de réservation en ligne (Julie utilise virement + téléphone).
+   Une fiche profil sur Doctolib remonte presque toujours en première page Google pour les recherches santé. Backlink à très forte autorité.
+3. **Psychologue.net, Therapeutes.com, Annuaire des thérapeutes**: annuaires français spécialisés, gratuit ou freemium. Backlinks supplémentaires.
+4. **Google Search Console**: une fois le site lancé, ajouter `julie-therapie.com`, soumettre le sitemap (`https://julie-therapie.com/sitemap.xml`) pour accélérer l'indexation initiale.
+5. **Bing Webmaster Tools**: même chose pour Bing (et donc indirectement pour ChatGPT Search, qui utilise l'index Bing).
 
-Ces étapes sont à faire par Julie elle-même (création de comptes), pas automatisables. À lui
-rappeler explicitement au moment du lancement.
+A vérifier quand le site sera lancé/décrypté.
 
-## Travailler avec un utilisateur non technique (Windows)
-
-Le mainteneur du site utilise Claude Code depuis **Windows natif** (pas WSL) et n'a pas de
-bagage en ligne de commande. Si une étape technique manque, c'est à toi de l'installer pour
-lui ou elle, pas à l'utilisateur de débugger.
+## Installer le projet sur un nouvel ordinateur
 
 ### Audit au premier contact
 
-À la première session sur une machine, vérifier ces outils avant toute autre chose :
+À la première session sur une machine, vérifier les outils disponibles et installer ceux qui manquent:
 
 ```powershell
 git --version          # >= 2.40
@@ -129,9 +165,8 @@ quarto --version       # >= 1.9
 gh auth status         # doit indiquer "Logged in"
 ```
 
-Si un seul manque ou est trop ancien, l'installer **sans poser de question** (sauf pour `gh auth
-login` qui ouvre un navigateur et requiert son action). Tous les outils ci-dessous sont
-disponibles via `winget` (préinstallé sur Windows 10/11) :
+Installer **sans poser de question** (sauf pour `gh auth login` qui ouvre un navigateur et requiert son action).
+Tous les outils ci-dessous sont disponibles via `winget` (préinstallé sur Windows 10/11) :
 
 | Outil | Commande d'installation | Rôle |
 |---|---|---|
@@ -166,55 +201,42 @@ mot de passe ensuite.
 Cloner dans un dossier facile à retrouver :
 
 ```powershell
-cd $HOME\Documents
+cd $HOME\Documents # Par défaut. Demander confirmation a l'utilisateur
 git clone https://github.com/jc-duboc/julie-therapie.com.git
 cd julie-therapie.com
 ```
 
 ### Cycle de modification
 
-1. `git pull` -- récupérer les changements distants (le cron quotidien rafraîchit les vidéos).
-2. Faire la modification demandée. **Toujours montrer un résumé en français simple de ce que
-   tu t'apprêtes à changer avant de toucher au fichier.**
-3. Optionnel mais recommandé : lancer `quarto preview` en arrière-plan et donner l'URL locale
-   (typiquement `http://localhost:4444`) pour que l'utilisateur voie le rendu.
+1. Si il y a des modifications non-commit/pushed au démarrage d'une nouvelle session, le signaler a l'utilisateur et proposer de publier/mettre a jour le site avant de commencer une nouvelle session de modifications.
+2. Toujours effectuer un `git pull` en début de session/chat.
+3. Toujours lancer `quarto preview` en arrière-plan et donner l'URL locale (typiquement `http://localhost:4444`) pour que l'utilisateur voie le rendu des changements effectués en temps réel.
+4. Si les instructions sont claires, faire les modifications demandées sans demander confirmation.
 
-### Publication (déclenchée par l'utilisateur, sans confirmation supplémentaire)
+### Publication (à la demande de l'utilisateur, sans confirmation supplémentaire)
 
 Quand l'utilisateur demande de **publier / synchroniser / mettre à jour / envoyer en ligne** le
 site (peu importe les mots exacts -- « publie », « synchronise », « envoie en ligne », « mets
 à jour le site », « pousse »...), exécuter d'une traite, **sans redemander confirmation** :
 
-1. `git status` puis `git add <fichiers>` -- cibler les fichiers réellement modifiés, jamais
-   `git add -A` à l'aveugle.
-2. `git commit -m "..."` avec un message **en français**, descriptif, sans co-author Claude
-   (c'est un site professionnel maintenu par une seule personne, pas un projet collaboratif).
+1. `git status` puis `git add <fichiers>`
+2. `git commit -m "..."` avec un message descriptif, sans co-author Claude (c'est un site professionnel maintenu par une seule personne, pas un projet collaboratif).
 3. `git push`.
-4. **Vérifier le déploiement immédiatement** -- ne pas laisser l'utilisateur le faire seul :
-   ```powershell
-   gh run watch --exit-status
-   # ou si plusieurs runs concurrents :
-   gh run list --workflow=publish.yml --limit 3
-   gh run view <run-id> --log-failed   # uniquement si le run a échoué
-   ```
-5. Annoncer le résultat à l'utilisateur :
-   - Succès : « C'est en ligne sur <https://julie-therapie.com> (compter 1-2 minutes pour que
-     le cache se rafraîchisse). »
-   - Échec : traduire l'erreur du log en une phrase simple, proposer une réparation, et **ne
-     pas** laisser le site dans un état cassé sans l'avoir signalé.
+4. **Vérifier le déploiement** (i.e. status de la pipeline CI/CD) pour pouvoir confirmer qu'il n'y a pas eu de soucis. Si il y en a, les corriger automatiquement.
+```powershell
+gh run watch --exit-status
+# ou si plusieurs runs concurrents :
+gh run list --workflow=publish.yml --limit 3
+gh run view <run-id> --log-failed   # uniquement si le run a échoué
+```
 
 ### Règles d'interaction
 
-- **Toujours en français**, dans tous les échanges visibles et les messages de commit.
 - **Pas de jargon technique** non expliqué : « le terminal » plutôt que « PowerShell », « la
   navbar » avec une parenthèse « (le menu en haut) » la première fois, etc.
-- **Confirmation avant toute action destructive** : suppression de fichier, `git reset`, force
-  push, modification d'un secret GitHub, changement de DNS. `git push` standard est **exclu**
-  de cette liste -- l'utilisateur l'a déjà déclenché en demandant la publication.
-- Si une commande échoue : **traduire l'erreur en une phrase claire** et proposer une action.
-  Ne pas coller la stack trace brute.
-- Ne jamais toucher au secret GitHub Actions `SITE_PASSWORD` sans demande explicite de
-  l'utilisateur.
+- **Confirmation avant toute action destructive** : suppression de fichier, `git reset`, force push, ...
+- Si une commande échoue : **traduire l'erreur en une phrase claire** et proposer une action. Ne pas coller la stack trace brute.
+- Ne jamais toucher au secret GitHub Actions `SITE_PASSWORD` sans demande explicite de l'utilisateur.
 
 ## Anti-patterns à éviter
 
