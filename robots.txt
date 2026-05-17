@@ -1,0 +1,64 @@
+# Production robots.txt for julie-therapie.com
+#
+# IMPORTANT: while staticrypt is active, .github/workflows/publish.yml overwrites
+# this file with a "Disallow: /" version before deploying, so search engines do
+# not index encrypted password-prompt pages. Once the staticrypt steps are
+# removed from publish.yml, this file is served as-is.
+
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers — explicitly allowed (the site is informational and aims
+# to be discoverable through AI assistants).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+Sitemap: https://julie-therapie.com/sitemap.xml

@@ -2,6 +2,8 @@
 title: "Livres"
 subtitle: "Mes publications et lectures recommandées"
 
+description-meta: "Publications de Julie-Christine Duboc et bibliographie de lecture sélectionnée selon les problématiques traitées en cabinet (psychotraumatologie, traumas sexuels, troubles de l'humeur, thérapie psychocorporelle, victimologie)."
+
 listing:
   - id: mes-livres
     contents: livres.yml

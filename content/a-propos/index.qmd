@@ -1,6 +1,8 @@
 ---
 title: "À propos"
 subtitle: "Julie-Christine Duboc -- parcours, formations et travaux"
+
+description-meta: "Julie-Christine Duboc, psychologue clinicienne, psychothérapeute, victimologue et sophrologue (RPPS 10009226225). Master de psychologie clinique (Paris 8, 2016), DU de Victimologie (Paris 5, 2020), sophrologie (2008), thérapie transpersonnelle. Cabinet en Haute-Normandie, téléconsultation principalement. Français, anglais, espagnol."
 ---
 
 ::: {.section-intro}

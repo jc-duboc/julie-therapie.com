@@ -1,6 +1,8 @@
 ---
 title: "Prendre rendez-vous"
 subtitle: "Comment me joindre et réserver une séance"
+
+description-meta: "Prendre rendez-vous avec Julie-Christine Duboc, psychologue clinicienne. Téléphone, SMS, email, WhatsApp ou Messenger. Réponse sous 48h ouvrées. Conditions de réservation (paiement par anticipation), préparation de la première séance, numéros d'urgence."
 ---
 
 ::: {.section-intro}
@@ -28,11 +30,11 @@ Vous pouvez me contacter par le canal qui vous convient le mieux. Je réponds en
       <span class="contact-value">07 69 97 05 80</span>
     </span>
   </a>
-  <a class="contact-card" href="mailto:contact@julie-therapie.com">
+  <a class="contact-card" href="mailto:juliechristineduboc@gmail.com">
     <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
     <span>
       <span class="contact-label">Email</span><br>
-      <span class="contact-value">contact@julie-therapie.com</span>
+      <span class="contact-value">juliechristineduboc@gmail.com</span>
     </span>
   </a>
   <a class="contact-card" href="https://wa.me/33769970580">
@@ -53,21 +55,19 @@ Vous pouvez me contacter par le canal qui vous convient le mieux. Je réponds en
 ```
 
 ::: {.callout-note appearance="simple"}
-**Horaires :** du lundi au samedi, de 9h à 21h (samedi compris). Je réponds en général sous
+**Horaires :** du lundi au samedi, de 9h à 21h. Je réponds en général sous
 48 heures ouvrées.
 :::
 
 ## Conditions de réservation
 
 ::: {.callout-important}
-## Le créneau est confirmé une fois le paiement effectué
-
-La **prise de rendez-vous devient ferme uniquement après réception du paiement**.
+## La prise de rendez-vous devient ferme uniquement après réception du paiement
 :::
 
 - **Paiement par anticipation, par virement bancaire.**
-- Les coordonnées bancaires vous sont communiquées au moment de la confirmation du créneau.
-- Si la séance **n'est pas payée 72 heures avant l'horaire prévu**, le créneau est libéré et
+- Les coordonnées bancaires vous sont communiquées au moment de la réservation de la séance.
+- Si la séance **n'est pas payée 72 heures avant l'horaire prévu**, le créneau est libéré pour être
   proposé à un autre patient.
 - **Présentiel possible en Haute-Normandie** -- modalités d'accueil et adresse communiquées sur
   demande.

@@ -1,6 +1,8 @@
 ---
 title: "Outils"
 subtitle: "Fiches pratiques, exercices et documents à télécharger"
+
+description-meta: "Fiches pratiques, exercices et documents à télécharger proposés par Julie-Christine Duboc en complément des séances. Bibliothèque indexée par thématique (trauma, estime de soi, anxiété, ...)."
 ---
 
 ::: {.section-intro}

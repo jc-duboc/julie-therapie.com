@@ -1,6 +1,8 @@
 ---
 title: "Ressources"
 subtitle: "Vidéos, livres et outils pour accompagner le travail thérapeutique"
+
+description-meta: "Ressources proposées par Julie-Christine Duboc : vidéos de sa chaîne YouTube, livres et lectures recommandées, fiches outils à télécharger. Contenus en complément du travail thérapeutique, classés par thématique."
 ---
 
 ::: {.section-intro}

@@ -4,6 +4,8 @@ project:
   resources:
     - .nojekyll
     - CNAME
+    - robots.txt
+    - llms.txt
     - "/res/**"
     - "/libs/*.js"
   render:
@@ -107,7 +109,7 @@ website:
         href: https://www.linkedin.com/in/julie-christine-duboc-9b894a328/
         aria-label: "LinkedIn"
       - icon: envelope
-        href: "mailto:contact@julie-therapie.com"
+        href: "mailto:juliechristineduboc@gmail.com"
         aria-label: "Email"
 
 lightbox: true
@@ -134,6 +136,12 @@ format:
     link-external-icon: false
     link-external-newwindow: true
     smooth-scroll: true
+    # Schema.org JSON-LD structured data — see libs/jsonld.html.
+    # Injected into every page <head> so search engines and AI assistants
+    # have a single source of truth for the practice (identity, credentials,
+    # contact, hours, specialties).
+    include-in-header:
+      - file: libs/jsonld.html
 
 execute:
   echo: false

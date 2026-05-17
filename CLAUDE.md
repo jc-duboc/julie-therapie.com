@@ -54,13 +54,63 @@ Actions (inspiré de `robjhyndman/quarto-password`). Conséquences :
 
 - Le mot de passe est stocké dans le secret GitHub Actions `SITE_PASSWORD` (Settings > Secrets and
   variables > Actions). Rotation : modifier le secret puis relancer le workflow.
-- `publish.yml` supprime `search.json`, `listings.json` et `sitemap.xml` avant le chiffrement
-  parce que staticrypt ne chiffre que les fichiers HTML : sans ce nettoyage, le contenu indexé
-  fuiterait via ces fichiers en clair. La recherche Quarto est donc cassée tant que le mode
-  encryption est actif -- c'est volontaire.
+- `publish.yml` neutralise tous les fichiers non-HTML qui fuiteraient du contenu avant le
+  chiffrement, parce que staticrypt ne chiffre que les fichiers HTML :
+  - **suppression** de `search.json`, `listings.json`, `sitemap.xml`, `llms.txt` ;
+  - **réécriture** de `robots.txt` en `Disallow: /` pour empêcher Google d'indexer les pages
+    de mot de passe staticrypt (sinon pollution durable de l'index, survit au lancement).
+- La recherche Quarto est donc cassée tant que le mode encryption est actif -- c'est volontaire.
 - Pour retirer la protection au lancement public : supprimer toutes les étapes entre
   `Render Quarto site` et `Upload artifact` dans `publish.yml`, puis retirer aussi le secret du
-  repo et le bandeau « site en construction » dans `_quarto.yml`.
+  repo et le bandeau « site en construction » dans `_quarto.yml`. **Tout le reste** (robots.txt
+  final, llms.txt, JSON-LD, sitemap auto-généré) s'active alors automatiquement, voir la
+  section « SEO & découvrabilité » plus bas.
+
+## SEO & découvrabilité
+
+Le site est instrumenté pour être trouvable par les moteurs de recherche et par les assistants
+IA dès la levée de l'encryption. Ce qui est déjà en place :
+
+- **`robots.txt`** (racine) : version finale « allow all » + liste explicite des bots LLM
+  autorisés (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.). Référence la sitemap.
+  **Pendant l'encryption**, `publish.yml` l'écrase par `Disallow: /` ; la version finale
+  réapparaît dès que l'étape `Strip content-leaking artefacts` est supprimée.
+- **`llms.txt`** (racine, spec [llmstxt.org](https://llmstxt.org)) : sommaire structuré du
+  site (titre + résumé en blockquote + liens vers les pages principales et secondaires) destiné
+  aux crawlers LLM. Supprimé pendant l'encryption, servi en clair après.
+- **`libs/jsonld.html`** : Schema.org JSON-LD de type `Psychologist` injecté dans le `<head>`
+  de chaque page via `format.html.include-in-header` dans `_quarto.yml`. Contient identité,
+  RPPS, coordonnées, adresse régionale, horaires, langues, spécialités, diplômes et
+  credentials. **Chiffré avec le reste du HTML pendant l'encryption**, devient lisible dès la
+  levée. À mettre à jour si Julie change ses tarifs, sa zone d'activité, ses formations.
+- **`description-meta` par page** : chaque `*.qmd` a un `description-meta` dans son front
+  matter, qui devient `<meta name="description">` dans le HTML rendu. La page Vidéos est
+  auto-générée -- la ligne est ajoutée par `scripts/fetch-youtube-playlists.mjs`.
+- **OpenGraph / Twitter Card** : déjà configurés dans `_quarto.yml`, image à
+  `/res/img/og-image.png`.
+- **Sitemap** : Quarto la génère automatiquement (`_site/sitemap.xml`), supprimée pendant
+  l'encryption, présente dès la levée.
+
+### Checklist au jour du lancement (hors `publish.yml`)
+
+Le SEO on-site ci-dessus pèse beaucoup moins que la présence locale pour un cabinet de
+psychothérapie. Pour Julie, l'impact réel viendra de :
+
+1. **Google Business Profile** -- créer la fiche, valider l'adresse (par carte postale ou
+   téléphone), ajouter horaires, photos, lien vers le site. C'est ce qui apparaît dans Google
+   Maps et dans le panneau de droite des recherches « psychologue [ville] ».
+2. **Doctolib** -- même sans système de réservation en ligne (Julie utilise virement +
+   téléphone), une fiche profil sur Doctolib remonte presque toujours en première page Google
+   pour les recherches santé. Backlink à très forte autorité.
+3. **Psychologue.net, Therapeutes.com, Annuaire des thérapeutes** -- annuaires français
+   spécialisés, gratuit ou freemium. Backlinks supplémentaires.
+4. **Google Search Console** -- ajouter `julie-therapie.com`, soumettre le sitemap
+   (`https://julie-therapie.com/sitemap.xml`) pour accélérer l'indexation initiale.
+5. **Bing Webmaster Tools** -- même chose pour Bing (et donc indirectement pour ChatGPT
+   Search, qui utilise l'index Bing).
+
+Ces étapes sont à faire par Julie elle-même (création de comptes), pas automatisables. À lui
+rappeler explicitement au moment du lancement.
 
 ## Travailler avec un utilisateur non technique (Windows)
 

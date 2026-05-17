@@ -365,6 +365,8 @@ function renderIndexQmd(playlists) {
 title: "Vidéos"
 subtitle: "Les vidéos de ma chaîne YouTube, groupées par playlist"
 
+description-meta: "Vidéos de la chaîne YouTube de Julie-Christine Duboc, psychologue clinicienne et psychothérapeute, organisées par playlist (éducation, témoignages, émissions). Contenus en complément du travail thérapeutique."
+
 listing:
 ${listingEntries}
 

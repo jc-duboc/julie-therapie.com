@@ -58,12 +58,25 @@ jobs:
           fi
 
       - name: Strip content-leaking artefacts
-        # staticrypt only encrypts HTML, so the full-text search index, the
-        # listings metadata, and the public sitemap would otherwise leak the
-        # site contents to anyone who hits those URLs directly.
+        # staticrypt only encrypts HTML, so any non-HTML asset that exposes
+        # content or structure has to be removed/neutralised by hand:
+        #   - search.json / listings.json: full-text index and listing metadata
+        #   - sitemap.xml: leaks the page graph
+        #   - llms.txt: leaks a curated site summary for LLM crawlers
+        #   - robots.txt: rewritten to "Disallow: /" so search engines do NOT
+        #     index the encrypted password-prompt pages (would otherwise stick
+        #     around in Google's index long after launch)
+        # When the staticrypt phase is removed at launch, delete this entire
+        # step too: robots.txt and llms.txt will then be served as-is, and the
+        # JSON index files will be regenerated normally by Quarto.
         run: |
-          rm -f _site/search.json _site/sitemap.xml
+          rm -f _site/search.json _site/sitemap.xml _site/llms.txt
           find _site -name "listings.json" -type f -print -delete
+          cat > _site/robots.txt <<'EOF'
+          # Site temporarily protected by staticrypt — do not index.
+          User-agent: *
+          Disallow: /
+          EOF
 
       - name: Install staticrypt
         run: npm install -g staticrypt
