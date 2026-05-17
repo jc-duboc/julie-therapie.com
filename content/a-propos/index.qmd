@@ -1,11 +1,12 @@
 ---
 title: "À propos"
-subtitle: "Julie-Christine Duboc -- parcours et publications"
+subtitle: "Julie-Christine Duboc -- parcours, formations et travaux"
 ---
 
 ::: {.section-intro}
 
-Psychologue clinicienne, je travaille depuis plusieurs années à articuler la **clinique du
+**J'exerce en tant que thérapeute depuis plus de 25 ans.** Psychologue clinicienne,
+psychothérapeute, victimologue et sophrologue, je travaille à articuler la **clinique du
 traumatisme**, l'approche **psychocorporelle** et un usage rigoureux de la psychologie classique.
 Mon objectif : proposer un accompagnement qui ne se limite pas à apaiser un symptôme, mais qui
 remonte jusqu'à sa cause -- pour que les changements soient durables.
@@ -18,17 +19,24 @@ remonte jusqu'à sa cause -- pour que les changements soient durables.
   Université Paris 5 -- Paris Descartes
 - **2016 -- Master de psychologie clinique et psychopathologie**
   Université Paris 8 -- Vincennes Saint-Denis
+- **2008 -- Sophrologie**
+  Formation diplômante en sophrologie
+- **1987 -- Thérapie transpersonnelle**
+  Approche **holistique** intégrant corps, émotions, mental et spirituel
 
 **Numéro RPPS :** 10009226225
-**Numéro ADELI :** _à compléter_
 
 ## {{< fa briefcase >}} Spécialités
 
-- Psychothérapie clinique (cadre intégratif)
+- **Psychotraumatologie** -- traumas simples et complexes
+- **Traumas sexuels** -- inceste, viol, agressions sexuelles
 - Thérapie psychocorporelle
-- Psychotraumatologie -- traumas simples et complexes
+- Psychothérapie clinique (cadre intégratif)
 - Victimologie
 - Sophrologie
+- Thérapie transpersonnelle (approche holistique)
+- Thérapie de couple
+- Suivis judiciaires (auteurs de violences)
 
 ## {{< fa globe >}} Langues parlées
 
@@ -47,11 +55,12 @@ listées ici.
 
 ## {{< fa location-dot >}} Cabinet
 
-**St Vigor (Seine-Maritime), près du Havre**
-_Adresse précise communiquée à la prise de rendez-vous._
+**Haute-Normandie**
+_Modalités d'accueil en présentiel et adresse précise communiquées sur demande._
 
-La plupart des séances ont lieu en **téléconsultation**. Le présentiel est possible pour la
-première séance.
+La plupart des séances ont lieu en **téléconsultation**.
+
+**Horaires :** du lundi au samedi, de 9h à 21h (samedi compris).
 
 ## {{< fa share-nodes >}} Me suivre
 

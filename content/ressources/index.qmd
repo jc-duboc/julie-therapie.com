@@ -14,20 +14,19 @@ ou des liens qui vous ont aidé·e.
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-4}
-### {{< fa video >}} Vidéos
+### {{< fa book-open >}} Livres
 
-Les vidéos de ma chaîne YouTube, classées par playlist (émissions, éducation, thématiques
-spécifiques).
+Mes publications et une bibliographie de lecture, sélectionnée selon les problématiques traitées.
 
-[→ Voir les vidéos](videos/index.qmd){.btn .btn-outline-primary}
+[→ Voir les livres](livres/index.qmd){.btn .btn-outline-primary}
 :::
 
 ::: {.g-col-12 .g-col-md-4}
-### {{< fa book-open >}} Livres
+### {{< fa video >}} Vidéos
 
-Une bibliographie de lecture, sélectionnée selon les problématiques traitées.
+Les vidéos de ma chaîne YouTube, classées par playlist (éducation, témoignages, émissions).
 
-[→ Voir les livres](livres/index.qmd){.btn .btn-outline-primary}
+[→ Voir les vidéos](videos/index.qmd){.btn .btn-outline-primary}
 :::
 
 ::: {.g-col-12 .g-col-md-4}

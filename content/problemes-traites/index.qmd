@@ -19,30 +19,69 @@ Le **trauma** est au cœur de ma pratique. Un événement traumatique laisse des
 la mémoire consciente : hypervigilance, reviviscences, évitements, dissociation, somatisations. Le
 travail consiste à réintégrer ce qui n'a pas pu l'être au moment de l'événement.
 
+Je suis **spécialisée dans la prise en charge des traumas sexuels** : inceste, viol, agressions
+sexuelles -- enfants comme adultes.
+
+- **Traumas sexuels** : inceste, viol, agressions sexuelles
 - Traumas simples : agressions, accidents, deuils brutaux
 - Traumas complexes (ESPT-c) : violences répétées, traumatismes de l'enfance, négligence
-- Conséquences de violences conjugales, intrafamiliales, sexuelles
+- Conséquences de violences conjugales, intrafamiliales
 - Stress post-traumatique différé, syndrome de stress post-traumatique
 - Deuils compliqués ou pathologiques
+- **Suivis judiciaires** : accompagnement de personnes ayant exercé des violences sur autrui
 
 ::: {.tags}
 [Trauma](../ressources/outils/index.qmd#trauma){.tag}
+[Inceste](../ressources/outils/index.qmd#trauma){.tag}
+[Viol](../ressources/outils/index.qmd#trauma){.tag}
 [ESPT](../ressources/outils/index.qmd#trauma){.tag}
 [Violences](../ressources/outils/index.qmd#trauma){.tag}
+[Suivi judiciaire](../ressources/outils/index.qmd#trauma){.tag}
 [Deuil](../ressources/outils/index.qmd#deuil){.tag}
 :::
 
 ## {{< fa cloud-rain >}} Troubles de l'humeur {#sec-humeur}
 
 - Épisodes dépressifs, dépressions chroniques
+- **Troubles bipolaires**
 - Burn-out (professionnel, parental, aidant)
 - Troubles de l'adaptation
 - Idées noires, idéation suicidaire (orientation vers prise en charge spécialisée si nécessaire)
 
 ::: {.tags}
 [Dépression](../ressources/outils/index.qmd){.tag}
+[Bipolarité](../ressources/outils/index.qmd){.tag}
 [Burn-out](../ressources/outils/index.qmd){.tag}
 [Épuisement](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa utensils >}} Troubles alimentaires {#sec-tca}
+
+- **Anorexie mentale**
+- **Boulimie**, hyperphagie
+- Restriction, contrôle, compulsions alimentaires
+- Travail sur le rapport au corps et l'image de soi
+
+::: {.tags}
+[Anorexie](../ressources/outils/index.qmd){.tag}
+[Boulimie](../ressources/outils/index.qmd){.tag}
+[TCA](../ressources/outils/index.qmd){.tag}
+:::
+
+## {{< fa heart-pulse >}} Manifestations psychosomatiques {#sec-psychosomatique}
+
+Le corps parle quand la parole ne suffit plus. J'accompagne les somatisations qui s'installent ou
+résistent aux prises en charge purement médicales :
+
+- **Douleurs chroniques** : mal de dos, fibromyalgie
+- **Affections cutanées et respiratoires** : eczéma, asthme
+- **Douleurs génitales ou sexuelles**
+- Troubles fonctionnels résistants à la prise en charge somatique
+
+::: {.tags}
+[Psychosomatique](../ressources/outils/index.qmd){.tag}
+[Fibromyalgie](../ressources/outils/index.qmd){.tag}
+[Douleur chronique](../ressources/outils/index.qmd){.tag}
 :::
 
 ## {{< fa wind >}} Troubles anxieux {#sec-anxiete}
@@ -80,12 +119,14 @@ Accompagnement à tout âge, avant ou après diagnostic :
 ## {{< fa users >}} Vie relationnelle & couple {#sec-relations}
 
 - **Thérapie de couple** : crises, communication, sexualité, infidélité, séparation
+- **Dépendance affective** : sortir des schémas qui enferment
 - Conflits familiaux, relations parent-enfant difficiles
 - Difficultés relationnelles récurrentes
 - Travail sur les attachements et schémas relationnels
 
 ::: {.tags}
 [Couple](../ressources/outils/index.qmd){.tag}
+[Dépendance affective](../ressources/outils/index.qmd){.tag}
 [Famille](../ressources/outils/index.qmd){.tag}
 [Attachement](../ressources/outils/index.qmd){.tag}
 :::
@@ -95,12 +136,11 @@ Accompagnement à tout âge, avant ou après diagnostic :
 - Manque de confiance en soi, sentiment d'imposture
 - Affirmation de soi
 - Questionnements identitaires (genre, orientation, identité culturelle)
-- Transitions de vie (parentalité, séparation, retraite, expatriation)
+- Étapes de vie (parentalité, séparation, retraite, expatriation)
 
 ::: {.tags}
 [Estime de soi](../ressources/outils/index.qmd){.tag}
 [Confiance](../ressources/outils/index.qmd){.tag}
-[Transition](../ressources/outils/index.qmd){.tag}
 :::
 
 ## {{< fa child >}} Enfants & adolescents {#sec-enfants}

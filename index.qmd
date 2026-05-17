@@ -1,11 +1,13 @@
 ---
-pagetitle: "Julie-Christine Duboc, Psychologue/Thérapeute"
+pagetitle: "Julie-Christine Duboc, Psychologue / Psychothérapeute / Victimologue / Sophrologue"
 
 title: "Julie-Christine Duboc"
-subtitle: "Psychologue clinicienne · Psychothérapeute"
+subtitle: "Psychologue clinicienne · Psychothérapeute · Victimologue · Sophrologue"
 
 image: res/img/avatar.jpg
-image-alt: "Portrait de Julie-Christine Duboc (image temporaire)"
+image-alt: "Portrait de Julie-Christine Duboc"
+
+description-meta: "Psychologue clinicienne, psychothérapeute, victimologue et sophrologue en Haute-Normandie et en téléconsultation. Plus de 25 ans d'expérience. Spécialisée en psychotraumatologie, traumas sexuels (inceste, viol), troubles de l'humeur, anxiété et thérapie psychocorporelle."
 
 about:
   template: trestles
@@ -18,34 +20,35 @@ about:
       aria-label: "Page de prise de rendez-vous"
     - text: "Téléphone"
       icon: telephone
-      href: "tel:+33277161118"
+      href: "tel:+33769970580"
       aria-label: "Appeler le cabinet"
     - text: "Email"
       icon: envelope
-      href: "mailto:juliechristineduboc@gmail.com"
+      href: "mailto:contact@julie-therapie.com"
       aria-label: "Envoyer un email"
     - text: "LinkedIn"
       icon: linkedin
       href: https://www.linkedin.com/in/julie-christine-duboc-9b894a328/
       aria-label: "Profil LinkedIn"
-
-website:
-  open-graph:
-    description: "Psychologue clinicienne à St Vigor (près du Havre) et en téléconsultation. Approche intégrative centrée sur les traumatismes."
 ---
 
 ::: {.section-intro}
-**Bienvenue.** Je suis psychologue clinicienne diplômée de l'Université Paris 8
-(Master de psychologie clinique et psychopathologie, 2016) et titulaire d'un
-Diplôme universitaire de Victimologie (Paris 5, 2020). Mon cabinet, en cours
-d'installation à **St Vigor (Seine-Maritime, près du Havre)**, accueille
-adultes, adolescents, enfants et couples. La majorité des séances ont lieu en
-**téléconsultation**, ce qui me permet de recevoir aussi bien depuis la
-Normandie qu'à distance.
+**Bienvenue. J'exerce en tant que thérapeute depuis plus de 25 ans.** Je suis
+psychologue clinicienne, psychothérapeute, victimologue et sophrologue, diplômée
+de l'Université Paris 8 (Master de psychologie clinique et psychopathologie,
+2016) et titulaire d'un Diplôme universitaire de Victimologie (Paris 5, 2020).
 
-**Langues parlées :** Français · English · Español
+Je suis **spécialisée en psychotraumatologie**, en particulier dans la prise en
+charge des **traumas sexuels** (inceste, viol). Mon cabinet est ouvert en
+Haute-Normandie ; la majorité des séances ont lieu en téléconsultation, ce qui
+me permet de recevoir aussi bien depuis la Normandie qu'à distance.
+
+**Langues parlées :** Français · English · Español\
+**Horaires :** du lundi au samedi, de 9h à 21h.
 
 :::
+
+::: {.full-width}
 
 ## Mon approche
 
@@ -64,7 +67,8 @@ J'allie deux modalités de travail :
   particulièrement adapté aux traumatismes lorsqu'ils résistent à l'élaboration
   purement verbale.
 
-Les deux approches sont combinables au sein d'une même séance longue.
+Les deux approches sont combinables au sein d'une **même séance**, lorsque **de
+plus longues séances** sont indiquées.
 
 --------------------------------------------------------------------------------
 
@@ -74,9 +78,10 @@ Les deux approches sont combinables au sein d'une même séance longue.
 ::::: {.g-col-12 .g-col-md-6}
 **Traumatismes & psychotraumatologie**
 
+- Traumas sexuels : inceste, viol
 - Traumas simples et complexes (PTSD, ESPT-c)
 - Violences subies, deuils traumatiques
-- Conséquences durables d'événements de vie
+- Suivis judiciaires (violences sur autrui)
 :::::
 
 ::::: {.g-col-12 .g-col-md-6}
@@ -100,7 +105,17 @@ Les deux approches sont combinables au sein d'une même séance longue.
 
 - Thérapie de couple
 - Difficultés relationnelles, conflits familiaux
+- Dépendance affective
 - Estime de soi, affirmation de soi
+:::::
+
+::::: {.g-col-12 .g-col-md-6}
+**Manifestations psychosomatiques**
+
+- Mal de dos, fibromyalgie
+- Asthme, eczéma
+- Troubles bipolaires, troubles alimentaires
+- Douleurs génitales ou sexuelles
 :::::
 
 :::
@@ -116,7 +131,8 @@ traitées](content/problemes-traites/index.qmd){.btn .btn-outline-primary}
 ::::: {.g-col-12 .g-col-md-4}
 ### {{< fa video >}} Consultations
 
-Visio principalement, présentiel possible à St Vigor pour la première séance.
+Visio principalement, présentiel possible en Haute-Normandie (modalités sur
+demande).
 
 [→ Tarifs &
 modalités](content/consultations/index.qmd){.btn .btn-sm .btn-outline-primary}
@@ -141,5 +157,7 @@ complément des séances, classés par thématique.
 [→ Explorer les
 ressources](content/ressources/index.qmd){.btn .btn-sm .btn-outline-primary}
 :::::
+
+:::
 
 :::

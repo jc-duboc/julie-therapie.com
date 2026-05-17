@@ -14,36 +14,36 @@ Vous pouvez me contacter par le canal qui vous convient le mieux. Je réponds en
 
 ```{=html}
 <div class="contact-grid">
-  <a class="contact-card" href="tel:+33277161118">
-    <span class="contact-icon">📞</span>
+  <a class="contact-card" href="tel:+33769970580">
+    <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
     <span>
       <span class="contact-label">Téléphone</span><br>
-      <span class="contact-value">02 77 16 11 18</span>
+      <span class="contact-value">07 69 97 05 80</span>
     </span>
   </a>
-  <a class="contact-card" href="sms:+33277161118">
-    <span class="contact-icon">💬</span>
+  <a class="contact-card" href="sms:+33769970580">
+    <span class="contact-icon"><i class="fa-solid fa-comment-sms"></i></span>
     <span>
       <span class="contact-label">SMS</span><br>
-      <span class="contact-value">02 77 16 11 18</span>
+      <span class="contact-value">07 69 97 05 80</span>
     </span>
   </a>
   <a class="contact-card" href="mailto:contact@julie-therapie.com">
-    <span class="contact-icon">✉️</span>
+    <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
     <span>
       <span class="contact-label">Email</span><br>
       <span class="contact-value">contact@julie-therapie.com</span>
     </span>
   </a>
-  <a class="contact-card" href="https://wa.me/33277161118">
-    <span class="contact-icon">🟢</span>
+  <a class="contact-card" href="https://wa.me/33769970580">
+    <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
     <span>
       <span class="contact-label">WhatsApp</span><br>
-      <span class="contact-value">Envoyer un message</span>
+      <span class="contact-value">07 69 97 05 80</span>
     </span>
   </a>
   <a class="contact-card" href="https://m.me/" rel="me">
-    <span class="contact-icon">💠</span>
+    <span class="contact-icon"><i class="fa-brands fa-facebook-messenger"></i></span>
     <span>
       <span class="contact-label">Messenger</span><br>
       <span class="contact-value">m.me / Facebook</span>
@@ -52,9 +52,9 @@ Vous pouvez me contacter par le canal qui vous convient le mieux. Je réponds en
 </div>
 ```
 
-::: {.callout-warning appearance="simple"}
-Les numéros, adresses email et liens ci-dessus sont **provisoires** : le cabinet est en cours
-d'installation. Ils seront mis à jour à l'ouverture officielle.
+::: {.callout-note appearance="simple"}
+**Horaires :** du lundi au samedi, de 9h à 21h (samedi compris). Je réponds en général sous
+48 heures ouvrées.
 :::
 
 ## Conditions de réservation
@@ -69,7 +69,9 @@ La **prise de rendez-vous devient ferme uniquement après réception du paiement
 - Les coordonnées bancaires vous sont communiquées au moment de la confirmation du créneau.
 - Si la séance **n'est pas payée 72 heures avant l'horaire prévu**, le créneau est libéré et
   proposé à un autre patient.
-- Possibilité d'une **première séance en présentiel** à St Vigor (toutes les suivantes en visio).
+- **Présentiel possible en Haute-Normandie** -- modalités d'accueil et adresse communiquées sur
+  demande.
+- **Facturation :** une facture est délivrée à toute personne qui en fait la demande.
 
 ## Avant la première séance
 

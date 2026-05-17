@@ -36,6 +36,22 @@ main.content {
     padding-top: 1.5rem;
 }
 
+// Body width is wide (1140px) so the page can host card grids; keep raw text
+// (paragraphs, lists, callouts that don't live inside a grid column) at a
+// comfortable measure of ~78 characters so long-form sections don't sprawl.
+main.content > p,
+main.content > ul,
+main.content > ol,
+main.content > blockquote,
+main.content > .callout {
+    max-width: 78ch;
+}
+
+main.content > .section-intro,
+main.content .section > .section-intro {
+    max-width: 72ch;
+}
+
 // --- Navbar ------------------------------------------------------------------
 
 .navbar {
@@ -260,17 +276,49 @@ h4 { color: $lapis-blue; }
 
 // --- Footer ------------------------------------------------------------------
 
-.page-footer {
+.nav-footer {
     background-color: $penn-blue !important;
     color: $cream;
 }
 
-.page-footer a {
+.nav-footer a {
     color: $uranian-blue;
 }
 
-.page-footer a:hover {
+.nav-footer a:hover {
     color: $cream;
+}
+
+// Quarto renders each footer entry as a <li class="nav-item">; without
+// separator the labels run together ("Cabinet de psychothérapieHaute-Normandie").
+// Insert a discreet middle dot AFTER every item-but-last so the dot never gets
+// orphaned at the start of a wrapped second line. Skip the right column since
+// it carries icon-only social links that have their own spacing.
+.nav-footer-left .footer-items,
+.nav-footer-center .footer-items {
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 0.4rem;
+    row-gap: 0.15rem;
+}
+
+.nav-footer-left .footer-items .nav-item:not(:last-child)::after,
+.nav-footer-center .footer-items .nav-item:not(:last-child)::after {
+    content: "·";
+    color: rgba($uranian-blue, 0.55);
+    margin-left: 0.35rem;
+}
+
+@media (max-width: 767.98px) {
+    .nav-footer-left .footer-items,
+    .nav-footer-center .footer-items {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-footer-left .footer-items .nav-item:not(:last-child)::after,
+    .nav-footer-center .footer-items .nav-item:not(:last-child)::after {
+        content: none;
+    }
 }
 
 // --- Announcement banner (under-construction) --------------------------------
@@ -634,6 +682,34 @@ h4 { color: $lapis-blue; }
     border-radius: $border-radius;
     border-left: 4px solid $resolution-blue;
     margin: 1.5rem 0 2rem 0;
+    text-align: justify;
+    hyphens: auto;
+}
+
+// Drop the default trestles column divider (1px solid #dee2e6) -- clashes
+// with the full-width sections that escape the right column below.
+div.quarto-about-trestles .about-contents {
+    border-left: none;
+    padding-left: 0;
+}
+
+// --- Full-width escape (trestles right column) -------------------------------
+// Trestles is a flex row: .about-entity is fixed at flex:0 0 42% and
+// .about-contents takes the remaining ~58%. Wrap content in `.full-width`
+// to break out of that right column and span the trestles container width.
+// We zero out .about-contents padding-left above, so 100% maps cleanly to 58%
+// of the trestles container: 100% / 0.58 = 172.4%, 42% / 0.58 = 72.4%.
+.about-contents .full-width {
+    width: 172.4%;
+    margin-left: -72.4%;
+    max-width: none;
+}
+
+@media (max-width: 991.98px) {
+    .about-contents .full-width {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 // --- Responsive tweaks -------------------------------------------------------

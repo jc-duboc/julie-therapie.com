@@ -18,11 +18,6 @@
 # Discovered playlists not listed here are appended at the end, alphabetically
 # ordered by their YouTube title.
 
-- id: PLRzKqfPtmi-94vh0fnkjBaiB9dhywmoBW
-  title: "Coup2point sur les i"
-  slug: coup2point
-  description: "L'émission de psychologie clinique -- échanges et entretiens."
-
 - id: PLRzKqfPtmi--QKAkLYo5fBWeuNbjbk4Bb
   title: "Éducation"
   slug: education
@@ -32,3 +27,8 @@
   title: "Incestée"
   slug: incestee
   description: "Témoignages et ressources autour de l'inceste, la mémoire traumatique et la reconstruction."
+
+- id: PLRzKqfPtmi-94vh0fnkjBaiB9dhywmoBW
+  title: "Coup2point sur les i"
+  slug: coup2point
+  description: "L'émission de psychologie clinique -- échanges, entretiens et participations."

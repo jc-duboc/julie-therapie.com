@@ -5,8 +5,10 @@ subtitle: "Les différents formats de séance que je propose"
 
 ::: {.section-intro}
 
-Toutes les séances ont lieu en **téléconsultation** (visio sécurisée), à l'exception de la
-**première séance**, qui peut se faire **en présentiel à St Vigor**.
+Toutes les séances ont lieu en **téléconsultation** (visio sécurisée). Le cabinet est en
+**Haute-Normandie** ; les modalités d'accueil en présentiel sont communiquées sur demande.
+
+**Horaires :** du lundi au samedi, de 9h à 21h (samedi compris).
 
 :::
 
@@ -17,9 +19,8 @@ Toutes les séances ont lieu en **téléconsultation** (visio sécurisée), à l
 ::: {.g-col-12 .g-col-md-6}
 ### {{< fa comments >}} Psychothérapie classique
 
-Un travail verbal, structuré, dans la tradition de la psychothérapie analytique et intégrative.
-Indiqué pour la majorité des demandes : troubles de l'humeur, anxiété, questionnements personnels,
-estime de soi.
+Un travail verbal, structuré, dans une approche **intégrative**. Indiqué pour la majorité des
+demandes : troubles de l'humeur, anxiété, questionnements personnels, estime de soi.
 
 - **Durée :** 45 minutes
 - **Tarif :** 50 €
@@ -48,8 +49,8 @@ L'articulation des deux approches dans une même séance, pour un travail en pro
 ::: {.g-col-12 .g-col-md-6}
 ### {{< fa heart >}} Thérapie de couple
 
-Travail conjoint avec les deux partenaires, sur la communication, les conflits, les blessures
-relationnelles, les transitions.
+Travail conjoint avec les deux partenaires, sur la communication, les conflits et les blessures
+relationnelles.
 
 - **Durée :** 1h30
 - **Tarif :** 90 €
@@ -104,6 +105,10 @@ l'horaire prévu**, elle est libérée et proposée à un autre patient.
 
 Cette règle s'applique à toutes les séances et vise à garantir l'accès aux créneaux pour les
 personnes qui s'engagent dans le travail thérapeutique.
+
+::: {.callout-note appearance="simple"}
+**Facturation :** une facture est délivrée à toute personne qui en fait la demande.
+:::
 
 ---
 
