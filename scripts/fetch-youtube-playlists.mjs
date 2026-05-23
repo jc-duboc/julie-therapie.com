@@ -233,8 +233,11 @@ async function fetchFeed(playlistId) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 20_000);
     try {
+        // YouTube returns HTTP 404 to bare/unknown User-Agents from cloud IPs
+        // (e.g. GitHub Actions runners). Reuse the Mozilla UA + consent cookies
+        // that already let us through for channel scraping.
         const res = await fetch(FEED_URL(playlistId), {
-            headers: { "User-Agent": "julie-therapie-fetcher/1.0" },
+            headers: CHANNEL_FETCH_HEADERS,
             signal: controller.signal,
         });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
