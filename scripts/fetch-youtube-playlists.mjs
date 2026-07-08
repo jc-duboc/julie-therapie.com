@@ -229,22 +229,35 @@ function uniqueSlug(base, used) {
 // Per-playlist RSS feed -> videos_<slug>.yml
 // ---------------------------------------------------------------------------
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// YouTube intermittently answers HTTP 404 on feeds/videos.xml to datacenter IPs
+// (GitHub Actions / Azure runners) even for public playlists, despite the
+// Mozilla UA + consent cookies that already let channel scraping through. Retry
+// a few times with backoff to ride out transient blocks; a persistent block is
+// handled by the caller falling back to the last-known-good videos_<slug>.yml.
+const FEED_RETRIES = 3;
+
 async function fetchFeed(playlistId) {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 20_000);
-    try {
-        // YouTube returns HTTP 404 to bare/unknown User-Agents from cloud IPs
-        // (e.g. GitHub Actions runners). Reuse the Mozilla UA + consent cookies
-        // that already let us through for channel scraping.
-        const res = await fetch(FEED_URL(playlistId), {
-            headers: CHANNEL_FETCH_HEADERS,
-            signal: controller.signal,
-        });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return await res.text();
-    } finally {
-        clearTimeout(timer);
+    let lastErr;
+    for (let attempt = 1; attempt <= FEED_RETRIES; attempt++) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 20_000);
+        try {
+            const res = await fetch(FEED_URL(playlistId), {
+                headers: CHANNEL_FETCH_HEADERS,
+                signal: controller.signal,
+            });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return await res.text();
+        } catch (e) {
+            lastErr = e;
+            if (attempt < FEED_RETRIES) await sleep(attempt * 2000 + Math.random() * 500);
+        } finally {
+            clearTimeout(timer);
+        }
     }
+    throw lastErr;
 }
 
 function parseFeed(xml) {
@@ -428,32 +441,49 @@ async function main() {
         process.exit(2);
     }
 
-    let failures = 0;
+    // A playlist is "renderable" when a videos_<slug>.yml exists for it -- freshly
+    // fetched, or a committed last-known-good left over from a previous run. A
+    // playlist with no data at all (failed fetch AND no cache) is dropped so it
+    // can't break `quarto render` with a missing listing include.
+    let degraded = 0;
+    const renderable = [];
     for (const pl of visible) {
         log(`fetch: ${pl.title} (${pl.id}) [${pl.source}]`);
+        const outPath = join(VIDEOS_DIR, `videos_${pl.slug}.yml`);
         try {
             const xml = await fetchFeed(pl.id);
             const videos = parseFeed(xml);
-            if (videos.length === 0 && !ALLOW_EMPTY) {
-                errlog(`  ! no entries returned for ${pl.title}`);
-                failures++;
-                continue;
-            }
-            const outPath = join(VIDEOS_DIR, `videos_${pl.slug}.yml`);
+            if (videos.length === 0 && !ALLOW_EMPTY) throw new Error("no entries returned");
             writeFileSync(outPath, renderVideosYaml(videos, pl.title), "utf8");
             log(`  -> ${relative(ROOT, outPath)} (${videos.length} video${videos.length === 1 ? "" : "s"})`);
+            renderable.push(pl);
         } catch (e) {
-            errlog(`  ! ${e.message}`);
-            failures++;
+            if (existsSync(outPath)) {
+                errlog(`  ! ${e.message} -- keeping last-known-good ${relative(ROOT, outPath)}`);
+                degraded++;
+                renderable.push(pl);
+            } else {
+                errlog(`  ! ${e.message} -- no cached data, dropping "${pl.title}"`);
+            }
         }
     }
 
-    writeFileSync(INDEX_QMD, renderIndexQmd(visible), "utf8");
-    log(`wrote ${relative(ROOT, INDEX_QMD)} (${visible.length} section${visible.length === 1 ? "" : "s"})`);
+    // Nothing to show: fail loudly so we don't publish a broken Vidéos page.
+    if (renderable.length === 0) {
+        errlog("error: no playlists have data (every fetch failed and nothing is cached)");
+        process.exit(2);
+    }
 
-    if (!NO_CLEANUP) cleanupStaleYamls(visible.map((p) => p.slug));
+    writeFileSync(INDEX_QMD, renderIndexQmd(renderable), "utf8");
+    log(`wrote ${relative(ROOT, INDEX_QMD)} (${renderable.length} section${renderable.length === 1 ? "" : "s"})`);
 
-    process.exit(failures ? 1 : 0);
+    if (!NO_CLEANUP) cleanupStaleYamls(renderable.map((p) => p.slug));
+
+    // Transient upstream failures that fell back to cache must NOT abort the
+    // deploy: the site still renders with last-known-good data and self-heals on
+    // the next run. Only an empty renderable list (handled above) is fatal.
+    if (degraded) log(`note: ${degraded} playlist(s) served from cache after fetch failure`);
+    process.exit(0);
 }
 
 main().catch((e) => { errlog(e); process.exit(2); });
